@@ -1,0 +1,22 @@
+{
+  "id": "NOC-DISK-PRESSURE",
+  "title": "Disco do host em pressão (≥90%)",
+  "index": "soc-noc",
+  "severity": "high",
+  "tags": ["noc", "capacity", "disk"],
+  "description": "Uso de disco acima de 90% em / ou /home — risco de falha de escrita dos sensores e logs.",
+  "detection": {
+    "query": {
+      "bool": {
+        "should": [
+          { "range": { "disk_root_pct": { "gte": 90 } } },
+          { "range": { "disk_home_pct": { "gte": 90 } } }
+        ],
+        "minimum_should_match": 1
+      }
+    },
+    "minCount": 1,
+    "timeRange": "10m"
+  },
+  "response": { "action": "notify", "level": "high" }
+}

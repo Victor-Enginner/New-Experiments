@@ -1,0 +1,14 @@
+{
+  "id": "NOC-SVC-DOWN",
+  "title": "Serviço crítico do stack fora do ar",
+  "index": "soc-noc",
+  "severity": "critical",
+  "tags": ["noc", "availability", "uptime"],
+  "description": "Um serviço da esteira SOC (ES, Kibana, Keycloak, router) falhou no último healthcheck — indisponibilidade de componente crítico.",
+  "detection": {
+    "query": { "term": { "up": false } },
+    "minCount": 1,
+    "timeRange": "10m"
+  },
+  "response": { "action": "notify", "level": "critical" }
+}

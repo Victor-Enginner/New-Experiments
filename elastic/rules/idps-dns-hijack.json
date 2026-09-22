@@ -1,0 +1,10 @@
+{
+  "id": "IDPS-DNS-HIJACK",
+  "engine": "idps",
+  "title": "Nameservers alterados (DNS hijack)",
+  "severity": "high",
+  "tags": ["idps", "dns", "hijack"],
+  "description": "Lista de nameservers mudou em relação ao baseline — possível hijack de DNS.",
+  "detection": { "engine": "idps" },
+  "response": { "action": "notify", "level": "high" }
+}

@@ -1,0 +1,33 @@
+{
+  "produto": "Guia IA para Contadores",
+  "headline": "IA para Contabilidade: *resultados em dias*, não meses",
+  "dor": "Contadores perdem horas com tarefas repetitivas (classificação de despesas, relatórios, conciliação). Este produto entrega o atalho prático, validado por especialista certificado em IA.",
+  "beneficios": [
+    "Aplicável hoje, sem código",
+    "Fluxos prontos para copiar e colar",
+    "Ética e LGPD embutidas",
+    "Checklists de validação humana",
+    "Ferramentas gratuitas primeiro",
+    "Suporte a modelos locais e cloud"
+  ],
+  "preco": "R$ 47,00",
+  "linkPagamento": "https://gumroad.com/l/CONFIGURE-SEU-LINK",
+  "autoridade": "Criado por profissional com 4 certificações em IA",
+  "provas": [
+    {
+      "numero": 10,
+      "sufixo": "",
+      "rotulo": "fluxos prontos"
+    },
+    {
+      "numero": 30,
+      "sufixo": "min",
+      "rotulo": "para aplicar o 1º"
+    },
+    {
+      "numero": 100,
+      "sufixo": "%",
+      "rotulo": "verificável"
+    }
+  ]
+}

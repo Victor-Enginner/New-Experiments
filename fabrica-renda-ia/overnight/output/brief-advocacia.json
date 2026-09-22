@@ -1,0 +1,33 @@
+{
+  "produto": "Pack Prompts Jurídicos",
+  "headline": "Recupere *4 dias por mês* com 0% de alucinação",
+  "dor": "Em 2025, um advogado foi condenado por litigância de má-fé usando petição com leis falsas criadas por IA. Enquanto isso, 60% do seu tempo ainda vai para ler petições e garimpar jurisprudência. Este pack resolve os dois lados: 10 prompts com checklists de validação humana e protocolo LGPD embutido — validados por especialista com 4 certificações em IA.",
+  "beneficios": [
+    "10 prompts jurídicos com checklist anti-alucinação",
+    "Protocolo LGPD: o que NUNCA colocar na IA",
+    "Validação humana embutida em cada fluxo",
+    "Funciona em ChatGPT, Claude, Gemini e local",
+    "Aplicável hoje, sem instalar nada",
+    "Timing: OAB + Stanford já estão pesquisando IA na advocacia"
+  ],
+  "preco": "R$ 47,00",
+  "linkPagamento": "https://gumroad.com/l/CONFIGURE-SEU-LINK",
+  "autoridade": "Criado por profissional com 4 certificações em IA · Conteúdo alinhado às diretrizes da OAB sobre uso responsável de IA",
+  "provas": [
+    {
+      "numero": 4,
+      "sufixo": " dias",
+      "rotulo": "devolvidos ao seu mês"
+    },
+    {
+      "numero": 40,
+      "sufixo": "%",
+      "rotulo": "menos tempo em petições"
+    },
+    {
+      "numero": 10,
+      "sufixo": "",
+      "rotulo": "prompts validados"
+    }
+  ]
+}

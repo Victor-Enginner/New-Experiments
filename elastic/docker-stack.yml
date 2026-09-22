@@ -1,0 +1,214 @@
+# docker-stack.yml — SOAR SIEM (ELK) em Docker Swarm com PROTEÇÃO TOTAL
+#
+# ── Modelo de ameaça coberto ──────────────────────────────────────────
+#  · Segredos (senhas/keys) NUNCA em env: montados em /run/secrets/*
+#    (tmpfs in-memory), cifrados em repouso (Raft) e em trânsito (mTLS).
+#  · Tráfego entre serviços: overlay IPsec/VXLAN cifrada.
+#  · ES/Kibana com xpack.security + TLS (HTTP e transport, client.auth).
+#  · Shippers autenticam como usuário DEDICADO `shipper` (papel soc_ingest
+#    de escopo mínimo) — nunca como admin `elastic`.
+#  · Containers sem root, sem capabilities (cap_drop: ALL), rootfs
+#    somente-leitura (ES/shipper), no-new-privileges.
+#
+# ── Deploy (uma vez, via elastic/deploy.sh) ──────────────────────────
+#   ./elastic/deploy.sh
+#   Ou manualmente: criar secrets, buildar imagens, docker stack deploy.
+#
+# NOTA: `docker stack deploy` ignora `build:` — as imagens são buildadas
+# pelo deploy.sh ANTES do deploy.
+
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: soc-elasticsearch:8.15.3
+    hostname: elasticsearch
+    networks: [soc]
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+      - eslogs:/usr/share/elasticsearch/logs
+      - escerts:/usr/share/elasticsearch/config/certs
+    tmpfs:
+      - /tmp:size=512m
+    secrets:
+      - es_password
+      - kibana_password
+      - shipper_password
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=soc-cluster
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=true
+      - xpack.security.http.ssl.keystore.path=certs/http.p12
+      - xpack.security.http.ssl.truststore.path=certs/http.p12
+      - xpack.security.transport.ssl.enabled=true
+      - xpack.security.transport.ssl.keystore.path=certs/transport.p12
+      - xpack.security.transport.ssl.truststore.path=certs/transport.p12
+      - xpack.security.transport.ssl.client.auth=required
+      - xpack.license.self_generated.type=basic
+      - ingest.geoip.downloader.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - target: 9200
+        published: 9200
+        protocol: tcp
+        mode: ingress
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 3G
+        reservations:
+          memory: 2G
+
+  # Job one-shot: seta senha do kibana_system + cria usuário/role shipper
+  es-setup:
+    image: soc-elasticsearch:8.15.3
+    command: ["setup"]
+    networks: [soc]
+    volumes:
+      - escerts:/usr/share/elasticsearch/config/certs:ro
+    secrets:
+      - es_password
+      - kibana_password
+      - shipper_password
+    environment:
+      - ES_HOST=https://elasticsearch:9200
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      resources:
+        limits:
+          memory: 256M
+
+  kibana:
+    image: soc-kibana:8.15.3
+    hostname: kibana
+    networks: [soc]
+    volumes:
+      - escerts:/usr/share/kibana/config/certs:ro
+    secrets:
+      - kibana_password
+      - kibana_encryption_key
+      - kibana_cert
+      - kibana_key
+    environment:
+      - SERVERNAME=kibana
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=5601
+      - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=/usr/share/kibana/config/certs/http_ca.crt
+      - SERVER_SSL_ENABLED=true
+      - SERVER_SSL_CERTIFICATE=/run/secrets/kibana_cert
+      - SERVER_SSL_KEY=/run/secrets/kibana_key
+    ports:
+      - target: 5601
+        published: 5601
+        protocol: tcp
+        mode: ingress
+    tmpfs:
+      - /tmp:size=128m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+
+  # Shippers SIEM — modo GLOBAL (roda nos nós que têm os sensores).
+  # Lêem eventos dos bind-mounts e enviam ao ES pela overlay cifrada,
+  # autenticando como `shipper` e confiando no CA do ES (volume escerts).
+  shipper:
+    image: soc-shipper:latest
+    networks: [soc]
+    volumes:
+      - escerts:/certs:ro
+      - /home/yoxzy/meus-projetos/meu-portfolio/ai-experiments/output/security:/sensors/security:ro
+      - /home/yoxzy/.9router/db/data.sqlite:/sensors/9router/data.sqlite:ro
+    tmpfs:
+      - /tmp:size=64m
+      - /tmp/state:size=16m
+    secrets:
+      - shipper_password
+    environment:
+      - ES_URL=https://elasticsearch:9200
+      - ES_USER=shipper
+      - ES_PASS_FILE=/run/secrets/shipper_password
+      - ES_TLS_CA=/certs/http_ca.crt
+      - ES_TLS_REJECT=1
+      - SECURITY_OUTPUT_DIR=/sensors/security
+      - ROUTER_DB_PATH=/sensors/9router/data.sqlite
+      - STATE_DIR=/tmp/state
+      - ES_POLL_MS=2000
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      mode: global
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          memory: 256M
+
+networks:
+  soc:
+    driver: overlay
+    # IPsec/VXLAN: tráfego cifrado entre os serviços
+    driver_opts:
+      encrypted: 'true'
+    attachable: false
+
+volumes:
+  esdata:
+  eslogs:
+  escerts:
+
+secrets:
+  # Criados fora do stack pelo deploy.sh (docker secret create).
+  # Nunca declarar valores em texto aqui.
+  es_password:
+    external: true
+  kibana_password:
+    external: true
+  shipper_password:
+    external: true
+  kibana_encryption_key:
+    external: true
+  kibana_cert:
+    external: true
+  kibana_key:
+    external: true

@@ -1,0 +1,45 @@
+{
+  "name": "meu-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "arch:gen": "node visual/generate-architecture.ts .",
+    "arch:tree": "python3 visual/render-tree.py",
+    "arch:watch": "node visual/watch-architecture.mjs .",
+    "arch:start": "node visual/start.mjs",
+    "arch:serve": "python3 -m http.server 8080 --directory visual",
+    "soc:netguard": "node elastic/ingest/netwatch-shipper.mjs",
+    "soc:egress": "node elastic/ingest/egress-shipper.mjs",
+    "soc:usage": "node elastic/ingest/usage-shipper.mjs",
+    "noc:agent": "node elastic/noc/noc-agent.mjs",
+    "noc:ship": "node elastic/noc/noc-shipper.mjs",
+    "idps:engine": "node elastic/idps/idps-engine.mjs",
+    "idps:ship": "node elastic/idps/idps-shipper.mjs",
+    "soc:eval": "node elastic/rules/evaluate.mjs",
+    "soc:soar": "node elastic/actions/soar.mjs",
+    "soc:ship": "node elastic/ingest/netwatch-shipper.mjs --once && node elastic/ingest/egress-shipper.mjs --once && node elastic/ingest/usage-shipper.mjs --once && node elastic/noc/noc-shipper.mjs --once && node elastic/idps/idps-shipper.mjs --once"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@studio-freight/lenis": "^1.0.42",
+    "framer-motion": "^12.42.2",
+    "gsap": "^3.15.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwindcss": "^4.3.3",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "vite": "^8.1.1"
+  }
+}

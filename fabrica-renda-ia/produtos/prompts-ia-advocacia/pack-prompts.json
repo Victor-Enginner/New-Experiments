@@ -1,0 +1,227 @@
+{
+  "nome": "Pack IA para Advogados: 10 Prompts Profissionais",
+  "versao": "1.0.0",
+  "publico": "Advogados autônomos e pequenos escritórios",
+  "prompts": [
+    {
+      "nome": "Resumo de Petição",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve resumir petições longas mantendo teses e pedidos.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Resumir petições longas mantendo teses e pedidos, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\nJoão da Silva, residente em São Paulo, move ação contra a empresa X com sede no RJ, alegando rescisão de contrato trabalhista sem aviso prévio e pagamento indevido de horas extras. A petição solicita indenização por danos morais e materiais, além do cumprimento das obrigações trabalhistas. O autor anexa cópia do contrato de trabalho e extrato bancário como provas.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** João da Silva move ação contra empresa X alegando rescisão abusiva e pagamento indevido de horas extras. Solicita indenização por danos morais e materiais, além do cumprimento das obrigações trabalhistas. A petição anexa contrato e extrato bancário como provas.\n\n- **Análise detalhada:**\n    * O autor apresenta uma alegação clássica de rescisão contratual irregular com base no não pagamento de horas extras e ausência de aviso prévio.\n    * A solicitação de indenização por danos morais demonstra a busca por reparação do dano imaterial sofrido pelo trabalhador.\n    * O documento anexado (contrato e extrato bancário) se mostra relevante para comprovar as alegações do autor.\n\n- **⚠️ Alertas:** É necessário verificar a validade dos documentos anexos, especialmente o contrato de trabalho e o extrato bancário, garantindo a autenticidade e integridade das informações.\n- **Próximos passos sugeridos:** 1) Realizar análise aprofundada dos documentos anexos. 2) Buscar jurisprudência relevante para embasar as defesas da empresa X. 3) Elaborar uma estratégia de defesa que atenda às particularidades do caso, considerando a legislação trabalhista vigente.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Pesquisa de Jurisprudência",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve estruturar busca e análise de precedentes.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Estruturar busca e análise de precedentes, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\nJoão Silva, advogado autônomo em São Paulo, está elaborando uma ação indenizatória para o cliente Maria Oliveira contra a empresa \"MegaCom\" por danos morais. A demanda surge após uma reclamação feita por Maria à MegaCom sobre um produto defeituoso, que resultou em danos materiais e psicológicos. João precisa analisar jurisprudência similar sobre responsabilidade civil de empresas em casos de produtos defeituosos para embasar sua petição inicial.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** Maria Oliveira busca indenização por danos morais contra a MegaCom devido a um produto defeituoso que causou prejuízos materiais e psicológicos. João Silva precisa analisar jurisprudência sobre responsabilidade civil de empresas em casos de produtos defeituosos para embasar sua petição inicial.\n- **Análise detalhada:** \n    - A demanda se baseia em danos morais, o que exige análise de precedentes sobre a reparação por sofrimento psicológico.\n    - É necessário identificar jurisprudência específica sobre responsabilidade civil da MegaCom ou empresas semelhantes nesse setor.\n    -  A identificação do tipo de produto defeituoso e os prejuízos causados são cruciais para a busca de precedentes relevantes.\n- **⚠️ Alertas:** \n    - A análise precisa ser direcionada para casos com características similares à demanda, considerando o tipo de produto defeituoso e a extensão dos danos morais.\n    - É fundamental verificar se há decisões recentes da jurisprudência local que tratem do tema.\n- **Próximos passos sugeridos:** Consultar bancos de dados jurídicos como Jusbrasil e LexML para encontrar precedentes relevantes. Buscar jurisprudência específica da MegaCom ou empresas do mesmo setor.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Análise de Contrato",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve identificar cláusulas de risco e abusivas.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Identificar cláusulas de risco e abusivas, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\nJoão Silva, dono de uma pequena loja em São Paulo, contratou Maria Oliveira para elaborar um contrato de locação com o prédio vizinho. A cláusula 5 do contrato prevê que João precisa pagar uma multa de R$ 10.000 caso não renove o contrato ao final dos 3 anos. Além disso, o contrato estabelece que o aluguel pode ser reajustado anualmente por Maria Oliveira, sem qualquer limite.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** O contrato apresenta cláusulas de risco e abusivas, principalmente a multa de R$ 10.000 caso João não renove o contrato e a flexibilidade para reajuste anual do aluguel sem limites definidos. É necessário revisão completa. Nível de confiança: Médio.\n- **Análise detalhada:**\n    - Cláusula 5 (Multa): Multas excessivas são consideradas abusivas. R$ 10.000 pode ser considerado desproporcional ao valor do aluguel e da duração do contrato.  \n    - Cláusula de reajuste: A ausência de limites para o reajuste anual do aluguel gera incerteza e potencialmente abusivo para João.\n- **⚠️ Alertas:** Revisão obrigatória por advogado especializado em direito civil, com foco em contratos comerciais. Negociação da cláusula 5 e a introdução de limites para o reajuste do aluguel são cruciais.\n- **Próximos passos:** Agendar uma consulta com um advogado especialista em contratos para revisar o documento e negociar as cláusulas abusivas.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Resposta a Cliente",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve traduzir juridiquês para linguagem clara.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Traduzir juridiquês para linguagem clara, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\n**Cliente:** João Silva, empresário individual. \n**Situação:**  João foi notificado por uma empresa de cobrança alegando dívida referente a uma fatura médica de R$ 2.500,00 em nome de sua esposa, Maria da Conceição Silva, emitida no ano de 2019. João alega desconhecer a fatura e afirma que nunca contratou serviços médicos com a empresa.\n**Documento:**  Carta de notificação da empresa de cobrança contendo informações sobre o débito e a ameaça de ação judicial.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** João Silva foi notificado por uma empresa de cobrança por dívida médica de sua esposa, Maria da Conceição Silva, de R$ 2.500,00. João nega a dívida e desconhece a fatura. A carta de notificação ameaça ação judicial caso não haja pagamento.\n- **Análise detalhada:**\n    - A carta apresenta os dados da empresa de cobrança, nome do devedor (Maria da Conceição Silva), valor da dívida e data da fatura. \n    - O documento menciona a possibilidade de ação judicial caso não haja resposta ou pagamento dentro do prazo estipulado.\n    - Não há informações sobre o serviço médico contratado, justificando o débito ou comprovação da relação entre Maria da Conceição Silva e a empresa de saúde.\n- **⚠️ Alertas:** É necessário verificar se existe algum contrato ou documento que comprove a dívida alegada pela empresa de cobrança.  A falta de informações sobre o serviço médico prestado exige atenção e requisição de dados adicionais à empresa de cobrança. \n- **Próximos passos sugeridos:** 1) Solicitar à empresa de cobrança cópia da fatura médica original, contrato ou comprovante do serviço prestado a Maria da Conceição Silva. 2) Investigar se existe registro de atendimento médico em nome de Maria da Conceição Silva na data indicada pela fatura.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Petição Inicial (esqueleto)",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve gerar estrutura inicial para revisão humana.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Gerar estrutura inicial para revisão humana, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\nJoão Silva, residente em São Paulo, foi contratado pela empresa XYZ para trabalhar como engenheiro civil. Após 6 meses, a empresa o demitiu sem justa causa. João alega que sua demissão aconteceu devido à pressão de um novo gerente, que não concordava com suas ideias e propostas de otimização. O contrato de trabalho de João previa um período de experiência de 3 meses, após o qual ele seria efetivado. Após a demissão, João entrou em contato com a empresa para receber os seus salários atrasados e o aviso prévio indenizado, mas não obteve resposta.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** João Silva alega demissão injusta da empresa XYZ após 6 meses de trabalho. Ele busca pagamento de salários atrasados e aviso prévio indenizado. O caso envolve possível violação do contrato de trabalho e falta de comunicação por parte da empresa.\n\n- **Análise detalhada:**\n    -  Demissão sem justa causa: É necessário analisar o contrato de trabalho para verificar se a demissão se enquadra nas condições legais previstas.\n    -  Pressão por parte do novo gerente: A alegação de João precisa ser investigada, buscando provas da pressão exercida pelo gerente e sua influência na decisão de demissão.\n    -  Salários atrasados e aviso prévio indenizado: É preciso confirmar o valor devido ao trabalhador e se a empresa cumpriu com suas obrigações legais.\n\n- ⚠️ **Alertas:**\n    -   A investigação precisa ser realizada com base em provas, documentos e depoimentos para determinar a veracidade das alegações de João Silva.\n\n- Próximos passos sugeridos:\n    -   Solicitar cópias do contrato de trabalho, documentação da demissão e relatórios sobre o desempenho de João Silva.\n    -   Contatar a empresa XYZ para solicitar esclarecimentos sobre os salários atrasados e o aviso prévio indenizado.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Due Diligence",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve checklist automatizado de análise documental.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Checklist automatizado de análise documental, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\n**Assunto:** Petição inicial para ação de cobrança -  Contrato de prestação de serviços.\n**Cliente:** João da Silva, reside em São Paulo-SP.\n**Devedor:** Maria de Souza, residente no mesmo estado. \nO contrato previa pagamento mensal de R$2.000,00 por serviços prestados pela Sra. Maria a partir de janeiro de 2023.  Até o momento, foram pagos apenas os meses de janeiro e fevereiro. O valor total devido é de R$4.000,00.\n**Anexo:** Contrato firmado entre João da Silva e Maria de Souza em dezembro de 2022.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:**  A petição inicial descreve uma ação de cobrança por serviços prestados, com valor total devido de R$4.000,00. O contrato entre as partes foi firmado em dezembro de 2022 e o pagamento está atrasado desde março de 2023.\n- **Análise detalhada:**  \n    - Data da petição inicial: [Necessário verificar a data no documento fornecido]\n    - Descrição dos serviços prestados: Contrato prevê prestação de serviços mensais.\n    - Valor total devido: R$4.000,00 (3 meses de atraso).\n    - Anexado ao documento: Contrato firmado em dezembro de 2022.\n- **⚠️ Alertas:** É necessário verificar se a petição inicial contém todos os elementos essenciais para a propositura da ação, como identificação das partes, objeto do contrato e fatos constitutivos do débito.\n    - O prazo prescricional para cobrança deve ser verificado com base na legislação vigente. \n- **Próximos passos sugeridos:** 1) Confirmar a data da petição inicial e verificar se há erros ou inconsistências no documento. 2) Realizar uma análise aprofundada do contrato para identificar os termos relevantes para a ação de cobrança. 3) Consultar o advogado para definir as estratégias processuais e verificar o prazo prescricional.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Parecer Preliminar",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve estruturar raciocínio jurídico preliminar.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Estruturar raciocínio jurídico preliminar, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\n**Cliente:** João Silva, empresário individual. \n**Objetivo:** Contratar serviços para renegociar dívidas com fornecedores após a pandemia.\n**Situação:**  João possui um contrato de prestação de serviços assinado em 2019 com uma empresa chamada \"Fornecedor A\". O contrato previa pagamentos mensais, mas João teve dificuldades financeiras durante a pandemia e atrasou os pagamentos. Fornecedor A está exigindo o pagamento integral da dívida e ameaça iniciar ações judiciais.\n**Documento:** Contratos de prestação de serviços (Anexo 1)\n\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** João Silva busca renegociar dívidas com a \"Fornecedor A\" após atrasos causados pela pandemia. O contrato original prevê pagamentos mensais, mas há atraso e ameaça judicial por parte do fornecedor. \n\n- **Análise detalhada:**  \n    * É preciso analisar o contrato de prestação de serviços (Anexo 1) para identificar cláusulas relevantes sobre pagamento atrasado, penalidades e possibilidade de renegociação.\n    * Buscar jurisprudência sobre casos semelhantes em que empresas enfrentaram dificuldades durante a pandemia e negociaram dívidas com fornecedores.\n\n- **⚠️ Alertas:** É necessário verificar se o contrato prevê mecanismos de resolução de conflitos alternativos (mediação, arbitragem) antes de iniciar ações judiciais. A situação exige análise detalhada do contexto jurídico específico da relação contratual entre João Silva e Fornecedor A.\n\n\n- **Próximos passos sugeridos:**\n    * Realizar a análise completa do contrato de prestação de serviços (Anexo 1).\n    * Investigar jurisprudência sobre renegociação de dívidas em contratos durante pandemias.\n    * Buscar alternativas de resolução extrajudicial, como mediação ou arbitragem.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "E-mail de Negociação",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve conduzir negociação de acordo por escrito.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Conduzir negociação de acordo por escrito, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\n**Assunto:** Acordo de cessão de direitos autorais\n\n**Partes:** \n\n* **Empresa A**: João Silva, CNPJ: 12.345.678/0001-99, com sede em São Paulo - SP.\n* **Empresa B**: Maria Pereira, CNPJ: 98.765.432/0001-11, com sede em Rio de Janeiro - RJ.\n\n**Propósito:** A Empresa A deseja ceder à Empresa B os direitos autorais sobre uma obra literária intitulada \"O Mistério da Estação\", escrita por João Silva. O valor a ser pago pela Empresa B será de R$ 5.000,00 (cinco mil reais).\n\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:**  A Empresa A deseja ceder os direitos autorais do livro \"O Mistério da Estação\" à Empresa B por R$ 5.000,00. O acordo precisa ser formalizado em documento escrito que especifique as condições de cessão e proteja os interesses de ambas as partes.\n- **Análise detalhada:** \n    * Identificação das partes envolvidas (Empresa A e Empresa B) com seus dados cadastrais (CNPJ, sede).\n    * Objeto da negociação: cessão dos direitos autorais do livro \"O Mistério da Estação\".\n    * Valor acordado para a transferência dos direitos: R$ 5.000,00.\n- **⚠️ Alertas:**  É necessário verificar se o autor possui os direitos autorais sobre a obra e se o contrato respeita as leis de propriedade intelectual brasileiras. O acordo deve ser revisado por um profissional do direito para garantir sua legalidade e segurança. \n- **Próximos passos sugeridos:** Formalizar o acordo por escrito, com cláusulas detalhadas sobre a cessão dos direitos autorais, responsabilidades das partes e resolução de conflitos. Consultar um advogado especializado em propriedade intelectual para revisar e validar o contrato.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Ata de Reunião",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve transformar anotações em ata formal.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Transformar anotações em ata formal, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\nJoão Silva, representado por seu advogado Maria Pereira, entrou com uma ação contra a empresa ABC Ltda. na 1ª Vara Cível de São Paulo, alegando o descumprimento de contrato firmado em 20/03/2023 para prestação de serviços de informática. O valor da causa é de R$ 50.000,00. A petição contém anexos com cópias do contrato e notas fiscais. Maria Pereira solicitou uma ata formalizada das informações relevantes.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** Ação civil proposta por João Silva contra a empresa ABC Ltda. na 1ª Vara Cível de São Paulo, com valor da causa de R$ 50.000,00, referente ao alegado descumprimento de contrato para prestação de serviços de informática.\n\n- **Análise detalhada:**\n    - Autor: João Silva, representado por Maria Pereira (Advogada).\n    - Demandado: ABC Ltda.\n    - Órgão jurisdicional: 1ª Vara Cível de São Paulo.\n    - Valor da causa: R$ 50.000,00.\n    - Natureza da ação: Indenização por descumprimento contratual.\n\n- **⚠️ Alertas:** É necessário revisar a petição e anexos para confirmar as informações e garantir a precisão da ata. A análise de fundamentos jurídicos e estratégia processual exige validação humana. \n\n- **Próximos passos sugeridos:**\n    1. Revisar a petição e anexos, verificando a clareza das alegações e a consistência dos documentos.\n    2. Consultar jurisprudência relevante para sustentar os argumentos da ação.\n    3. Elaborar estratégia processual considerando as peculiaridades do caso.",
+      "exemploFonte": "ollama/gemma2:latest"
+    },
+    {
+      "nome": "Compliance LGPD",
+      "categoria": "IA para Advogados",
+      "prompt": "# PAPEL\nVocê é um assistente especializado em IA para Advogados, com profundo conhecimento das práticas, terminologia e regulamentações do setor no Brasil.\n\n# CONTEXTO\nAdvogados autônomos e pequenos escritórios enfrentam o seguinte problema: Advogados gastam 60% do tempo lendo petições e jurisprudência.\nVou te fornecer [INSIRA AQUI OS DADOS/DOCUMENTO] e você deve auditar documentos quanto a dados pessoais.\n\n# TAREFA\n1. Leia atentamente todo o material fornecido.\n2. Auditar documentos quanto a dados pessoais, seguindo as práticas recomendadas do setor.\n3. Identifique pontos que exigem atenção ou revisão humana obrigatória.\n\n# FORMATO DE SAÍDA\n- Resumo executivo (máx. 5 linhas)\n- Análise detalhada (estruturada em tópicos)\n- ⚠️ Alertas: o que precisa de validação humana\n- Próximos passos sugeridos\n\n# RESTRIÇÕES\n- NUNCA invente dados, leis, valores ou referências. Se não souber, diga explicitamente.\n- NÃO processe dados pessoais identificáveis além do necessário (LGPD).\n- Sempre indique o nível de confiança da sua análise (alto/médio/baixo).\n\n# EXEMPLO DE USO\n[Cole aqui um exemplo real — substitua pelos seus dados]",
+      "dicas": [
+        "Substitua [INSIRA AQUI OS DADOS/DOCUMENTO] pelo seu material real",
+        "Para documentos grandes, divida em partes e processe em sequência",
+        "Sempre revise a saída antes de enviar ao cliente — IA erra"
+      ],
+      "modelosCompativeis": [
+        "ChatGPT (GPT-4+)",
+        "Claude",
+        "Gemini",
+        "Ollama local (gemma2/llama3)"
+      ],
+      "variaveis": [
+        "[INSIRA AQUI OS DADOS/DOCUMENTO]"
+      ],
+      "fonte": "mock",
+      "exemploPreenchido": "### ENTRADA (exemplo)\n**Assunto:** Petição Inicial para Ação de Revisão de Contratos de Compra e Venda\n\n**Cliente:** João Silva, residente em São Paulo, busca a revisão de contratos de compra e venda de imóveis com empresa imobiliária \"Casa Nova\" por suspeita de cláusulas abusivas. \n\n**Documentação:** Petição Inicial contendo dados pessoais do cliente (nome completo, CPF, endereço) e da empresa \"Casa Nova\" (razão social, CNPJ), além de anexos com cópias dos contratos de compra e venda.\n\n### SAÍDA (exemplo resumido)\n- **Resumo executivo:** A petição inicial e os anexos contêm dados pessoais do cliente e da empresa \"Casa Nova\".  É necessário identificar se as informações são processadas adequadamente e se há necessidade de anonimização em partes específicas, como nos contratos.\n\n- **Análise detalhada:**\n    * Dados pessoais identificáveis presentes na petição inicial (nome completo, CPF, endereço) precisam ser protegidos conforme a LGPD.\n    *  Contratos anexos contêm dados sensíveis como nomes dos signatários, valores e endereços. A análise precisa verificar se os dados estão devidamente anonimizados, caso seja necessário para proteção da privacidade. \n\n- **⚠️ Alertas:**   \n    * Revisão manual necessária para garantir o tratamento adequado dos dados pessoais nos contratos anexos. É importante avaliar se a anonimização dos dados é possível e adequada ao contexto.\n\n- **Próximos passos sugeridos:**  1) Analisar os contratos anexos, identificando dados sensíveis e avaliando a necessidade de anonimização. 2) Consultar um especialista em LGPD para garantir o cumprimento das normas de proteção de dados pessoais.",
+      "exemploFonte": "ollama/gemma2:latest"
+    }
+  ]
+}

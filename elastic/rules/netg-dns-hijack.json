@@ -1,0 +1,14 @@
+{
+  "id": "NETG-DNS-HIJACK",
+  "title": "Nameservers alterados (possível DNS hijack)",
+  "index": "soc-netguard",
+  "severity": "high",
+  "tags": ["dns", "hijack", "egress"],
+  "description": "A lista de nameservers (/etc/resolv.conf) mudou em relação ao baseline do netwatch.",
+  "detection": {
+    "query": { "match": { "alert_type": "DNS_CHANGE" } },
+    "minCount": 1,
+    "timeRange": "1h"
+  },
+  "response": { "action": "notify", "level": "high" }
+}

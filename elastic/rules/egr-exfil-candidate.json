@@ -1,0 +1,13 @@
+{
+  "id": "EGR-EXFIL-CANDIDATE",
+  "title": "Tentativa repetida de exfiltração via egress",
+  "index": "soc-egress",
+  "severity": "high",
+  "tags": ["exfiltration", "egress-firewall", "block"],
+  "description": "Um mesmo host externo foi bloqueado várias vezes pelo firewall de egress em curto espaço de tempo — possível tentativa de exfiltração.",
+  "detection": {
+    "aggs": { "field": "host", "minCount": 5, "timeRange": "10m" },
+    "query": { "match_all": {} }
+  },
+  "response": { "action": "quarantine", "level": "high" }
+}

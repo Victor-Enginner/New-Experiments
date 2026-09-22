@@ -1,0 +1,13 @@
+{
+  "id": "USG-ANOMALY-COST",
+  "title": "Pico anômalo de custo por modelo",
+  "index": "soc-usage",
+  "severity": "medium",
+  "tags": ["billing", "anomaly"],
+  "description": "Custo agregado de um modelo supera o limiar configurado em 1h — possível abuso de apiKey ou loop de chamadas.",
+  "detection": {
+    "aggs": { "field": "model", "maxCost": 5, "timeRange": "1h" },
+    "query": { "match_all": {} }
+  },
+  "response": { "action": "notify", "level": "medium" }
+}

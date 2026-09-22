@@ -1,0 +1,14 @@
+{
+  "id": "NETG-ARP-SPOOF",
+  "title": "ARP spoofing detectado",
+  "index": "soc-netguard",
+  "severity": "critical",
+  "tags": ["mitm", "arp", "lateral-movement"],
+  "description": "MAC do gateway mudou entre ciclos do netwatch — clássico ataque ARP spoofing/MITM.",
+  "detection": {
+    "query": { "match": { "alert_type": "ARP_SPOOFING" } },
+    "minCount": 1,
+    "timeRange": "1h"
+  },
+  "response": { "action": "notify", "level": "critical" }
+}

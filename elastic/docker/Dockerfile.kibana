@@ -1,0 +1,9 @@
+# soc-kibana — Kibana 8 endurecido com segredos via secrets do Swarm
+FROM docker.elastic.co/kibana/kibana:8.15.3
+
+USER root
+COPY --chown=kibana:kibana entrypoint-kibana.sh /usr/local/bin/entrypoint-kibana.sh
+RUN chmod +x /usr/local/bin/entrypoint-kibana.sh
+USER kibana
+
+ENTRYPOINT ["/usr/local/bin/entrypoint-kibana.sh"]

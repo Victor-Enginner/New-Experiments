@@ -1,0 +1,10 @@
+{
+  "id": "IDPS-SVC-OUT",
+  "engine": "idps",
+  "title": "Serviço crítico do stack fora do ar",
+  "severity": "critical",
+  "tags": ["idps", "availability"],
+  "description": "Healthcheck do NOC acusou falha sustentada — indisponibilidade crítica.",
+  "detection": { "engine": "idps" },
+  "response": { "action": "notify", "level": "critical" }
+}

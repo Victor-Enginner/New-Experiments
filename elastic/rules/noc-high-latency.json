@@ -1,0 +1,14 @@
+{
+  "id": "NOC-HIGH-LATENCY",
+  "title": "Latência anômala em serviço",
+  "index": "soc-noc",
+  "severity": "medium",
+  "tags": ["noc", "performance", "latency"],
+  "description": "Resposta de um serviço acima de 2s no healthcheck — degradação de desempenho que antecede indisponibilidade.",
+  "detection": {
+    "query": { "range": { "latencyMs": { "gte": 2000 } } },
+    "minCount": 3,
+    "timeRange": "10m"
+  },
+  "response": { "action": "notify", "level": "medium" }
+}

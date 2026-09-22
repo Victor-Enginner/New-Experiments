@@ -1,0 +1,12 @@
+{
+  "chaves": {
+    "demo": {
+      "key": "demo-key-gratuita",
+      "plano": "demo",
+      "limiteMensal": 100,
+      "uso": 2,
+      "criadaEm": "2026-07-28T05:34:45.155Z"
+    }
+  },
+  "observacao": "Gere chaves pagas com: node server.js --criar-key email@cliente.com pro"
+}

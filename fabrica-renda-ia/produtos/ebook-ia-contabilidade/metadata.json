@@ -1,0 +1,55 @@
+{
+  "titulo": "Guia Prático de IA para Contabilidade",
+  "subtitulo": "Da teoria à prática em 30 dias — mesmo sem saber programar",
+  "descricaoKDP": "Guia Prático de IA para Contabilidade: guia prático para Contadores autônomos e pequenos escritórios contábeis no Brasil. Resolva: Contadores perdem horas com tarefas repetitivas (classificação de despesas, relatórios, conciliação). Inclui 5 fluxos prontos, comparativo de ferramentas, ética/LGPD e plano de 30 dias com checklists.",
+  "keywords": [
+    "automação contábil",
+    "IA contabilidade",
+    "RAG documentos fiscais"
+  ],
+  "precoSugerido": "R$ 47,00",
+  "plataformas": {
+    "hotmart": "Suba o ebook.pdf + pagina-venda.html como página de vendas",
+    "amazonKDP": "Converta ebook.md para .docx (pandoc) ou suba o PDF; use keywords acima",
+    "gumroad": "Produto digital → upload ebook.pdf → cole descricaoKDP"
+  },
+  "geradoEm": "2026-07-28T05:58:31.622Z",
+  "capitulos": [
+    {
+      "numero": 1,
+      "titulo": "Por que IA para Contabilidade é inevitável (e por que começar agora)",
+      "fonte": "mock"
+    },
+    {
+      "numero": 2,
+      "titulo": "Os fundamentos mínimos que você precisa (sem jargão)",
+      "fonte": "mock"
+    },
+    {
+      "numero": 3,
+      "titulo": "5 fluxos de trabalho prontos para aplicar hoje",
+      "fonte": "mock"
+    },
+    {
+      "numero": 4,
+      "titulo": "Ferramentas: stack gratuito vs. stack profissional",
+      "fonte": "mock"
+    },
+    {
+      "numero": 5,
+      "titulo": "Ética, LGPD e limites: o que NUNCA automatizar",
+      "fonte": "mock"
+    },
+    {
+      "numero": 6,
+      "titulo": "Casos reais e números: antes e depois da adoção",
+      "fonte": "mock"
+    },
+    {
+      "numero": 7,
+      "titulo": "Plano de implementação em 30 dias",
+      "fonte": "mock"
+    }
+  ],
+  "proximaAcao": "⚠️ REVISÃO HUMANA OBRIGATÓRIA: leia cada capítulo, adicione sua experiência real e corrija imprecisões antes de publicar. Seus 4 certificados = sua autoridade. Use-os na bio."
+}

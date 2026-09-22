@@ -1,0 +1,17 @@
+# soc-shipper — shippers SIEM dentro do Swarm
+#
+# node:24-alpine + sqlite (o usage-shipper consulta o banco do 9router via
+# CLI sqlite3, mesmo caminho usado na máquina host).
+FROM node:24-alpine
+
+RUN apk add --no-cache sqlite
+
+WORKDIR /app
+COPY elastic /app/elastic
+COPY ai-experiments/lib/usage-history.js /app/ai-experiments/lib/usage-history.js
+COPY entrypoint-shipper.sh /app/entrypoint-shipper.sh
+RUN chmod +x /app/entrypoint-shipper.sh
+
+# sem root, sem capabilities extras
+USER node
+CMD ["/app/entrypoint-shipper.sh"]

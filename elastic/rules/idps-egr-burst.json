@@ -1,0 +1,10 @@
+{
+  "id": "IDPS-EGR-BURST",
+  "engine": "idps",
+  "title": "Rafaga de exfiltração via egress",
+  "severity": "high",
+  "tags": ["idps", "exfiltration", "prevent"],
+  "description": "Mesmo host bloqueado ≥4x em 10min pelo firewall de egress — exfiltração ativa. IDPS aplica quarentena preventiva.",
+  "detection": { "engine": "idps" },
+  "response": { "action": "quarantine", "level": "high" }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "IDPS-SUS-CONN",
+  "engine": "idps",
+  "title": "Conexão suspeita detectada",
+  "severity": "medium",
+  "tags": ["idps", "network"],
+  "description": "Conexão classificada como suspeita pelo sensor de rede local.",
+  "detection": { "engine": "idps" },
+  "response": { "action": "notify", "level": "medium" }
+}

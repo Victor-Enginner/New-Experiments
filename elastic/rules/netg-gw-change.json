@@ -1,0 +1,14 @@
+{
+  "id": "NETG-GW-CHANGE",
+  "title": "Gateway default trocado",
+  "index": "soc-netguard",
+  "severity": "critical",
+  "tags": ["route", "mitm"],
+  "description": "A rota default mudou — tráfego pode estar sendo redirecionado.",
+  "detection": {
+    "query": { "match": { "alert_type": "GATEWAY_CHANGE" } },
+    "minCount": 1,
+    "timeRange": "1h"
+  },
+  "response": { "action": "notify", "level": "critical" }
+}

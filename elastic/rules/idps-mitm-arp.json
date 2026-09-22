@@ -1,0 +1,10 @@
+{
+  "id": "IDPS-MITM-ARP",
+  "engine": "idps",
+  "title": "ARP spoofing / gateway trocado",
+  "severity": "critical",
+  "tags": ["idps", "mitm", "arp"],
+  "description": "MAC do gateway mudou entre ciclos do netwatch — ataque MITM/ARP ativo.",
+  "detection": { "engine": "idps" },
+  "response": { "action": "notify", "level": "critical" }
+}

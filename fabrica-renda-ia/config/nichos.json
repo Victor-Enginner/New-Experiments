@@ -1,0 +1,55 @@
+{
+  "nichos": [
+    {
+      "id": "ia-contabilidade",
+      "nome": "IA para Contabilidade",
+      "dor": "Contadores perdem horas com tarefas repetitivas (classificação de despesas, relatórios, conciliação)",
+      "publico": "Contadores autônomos e pequenos escritórios contábeis no Brasil",
+      "ticketSugerido": { "ebook": "R$ 47,00", "packPrompts": "R$ 27,00", "consultoria": "R$ 1.500,00" },
+      "keywords": ["automação contábil", "IA contabilidade", "RAG documentos fiscais"],
+      "concorrencia": "baixa",
+      "potencial": "alto"
+    },
+    {
+      "id": "ia-advocacia",
+      "nome": "IA para Advogados",
+      "dor": "Advogados gastam 60% do tempo lendo petições e jurisprudência",
+      "publico": "Advogados autônomos e pequenos escritórios",
+      "ticketSugerido": { "ebook": "R$ 67,00", "packPrompts": "R$ 37,00", "microsaas": "R$ 97/mês" },
+      "keywords": ["IA jurídica", "petição automática", "análise de contratos IA"],
+      "concorrencia": "media",
+      "potencial": "muito alto"
+    },
+    {
+      "id": "ia-imobiliario",
+      "nome": "Dados e IA para Mercado Imobiliário",
+      "dor": "Imobiliárias não sabem precificar nem qualificar leads automaticamente",
+      "publico": "Corretores e imobiliárias de médio porte",
+      "ticketSugerido": { "dataset": "R$ 49,90", "ebook": "R$ 39,00", "api": "pay-per-call" },
+      "keywords": ["dados imóveis", "precificação imobiliária", "leads imobiliários"],
+      "concorrencia": "baixa",
+      "potencial": "alto"
+    },
+    {
+      "id": "ia-saude-mental",
+      "nome": "IA para Profissionais de Saúde Mental",
+      "dor": "Psicólogos não têm tempo para prontuários, agendamentos e material de apoio",
+      "publico": "Psicólogos e terapeutas autônomos",
+      "ticketSugerido": { "ebook": "R$ 37,00", "packPrompts": "R$ 27,00" },
+      "keywords": ["IA psicologia", "prontuário automático", "ética IA saúde"],
+      "concorrencia": "muito baixa",
+      "potencial": "medio-alto",
+      "observacao": "Nicho sensível: enfatizar ética e LGPD em todo material"
+    },
+    {
+      "id": "ia-ecommerce",
+      "nome": "IA para E-commerce Pequeno",
+      "dor": "Lojistas pequenos não conseguem escrever descrições, SEO e atender clientes em escala",
+      "publico": "Donos de lojas na Shopee, Mercado Livre e Shopify",
+      "ticketSugerido": { "packPrompts": "R$ 27,00", "microsaas": "R$ 47/mês", "consultoria": "R$ 800,00" },
+      "keywords": ["descrição produto IA", "SEO ecommerce", "chatbot loja"],
+      "concorrencia": "media",
+      "potencial": "alto"
+    }
+  ]
+}

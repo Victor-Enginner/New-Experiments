@@ -1,0 +1,35 @@
+# FASE 5 — GitHub Pages (nunca commitar segredos, deps nem lixo)
+node_modules/
+dist/
+dist-local/
+.vite*/
+*.log
+.env
+.env.*
+*.jsonl
+
+# zips e artefatos de scan
+*.zip
+snyk_*.json
+
+# fora do escopo / repositórios de terceiros
+claw-code-main/
+PentestGPT/
+semantica/
+
+# 4,1 GB de sensores/datasets/venvs — fora do repo de Pages (divergência registrada
+# no relatório da FASE 6; versionar só o código fonte se o humano pedir)
+ai-experiments/
+
+# estado operacional dos shippers (offsets)
+elastic/state/
+
+# binários/lixo de raiz
+bateria_go
+bateria_go.jsonl
+instrumentation.jsonl
+claims.log
+lint_*.log
+__pycache__/
+.sandbox-tmp/
+.sandbox-home/
