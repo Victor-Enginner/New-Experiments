@@ -38,7 +38,7 @@ roda `.github/workflows/pages.yml` (peaceiris/actions-gh-pages) e republica
 | `ai-experiments/` (4,1 GB) | sensores do SOC + laboratório | **não versionar** (gitignore) — dividir em sub-repos no futuro se quiser |
 | `elastic/` | SOC/SIEM (código do New-Experiments) | docs em `semantica.md` |
 | `semantica/` | clone do OSS `semantica-agi/semantica` (referência) | **não é nosso** — não publicar como se fosse |
-| `docs/` | evidências de pentest/forense | **privado** — nunca commitar (gitignore) |
+| `docs/` | evidências de pentest/forense | **privado** — nunca commitar (gitignore — blindado em `1c5eed5`+) |
 | `PentestGPT/`, `claw-code-main/` | fora do escopo | gitignore |
 | `src/`, `public/`, `index.html` | template Vite raiz (legado) | candidato a remoção futura |
 

@@ -17,6 +17,26 @@ claw-code-main/
 PentestGPT/
 semantica/
 
+# EVIDÊNCIAS DE PENTEST/FORENSE — privado, nunca commitar (ver ORGANIZACAO.md)
+docs/
+
+# prompts e artefatos de trabalho soltos na raiz
+UMBRAALA_PROMPT_MESTRE*.md
+PROMPT-VALIDACAO.md
+visual/
+deploy/
+claude/
+.openclaude/
+.claw/
+.claude/
+.detector_watermark
+bateria_go.go
+pagina_alvo.html
+documento.md
+install-llama-pi-zorin.sh
+setup-nvme.sh
+setup-performance.sh
+
 # 4,1 GB de sensores/datasets/venvs — fora do repo de Pages (divergência registrada
 # no relatório da FASE 6; versionar só o código fonte se o humano pedir)
 ai-experiments/
