@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overnight Runner — Automação de madrugada</title>
+<meta name="description" content="Orquestrador que roda seus agentes de madrugada com fila, dependências e dashboard. Implantação assistida.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0B0F1A;color:#e2e8f0;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:3rem 1.25rem 4rem}
+.badge{display:inline-block;background:#7C3AED22;border:1px solid #7C3AED66;color:#A78BFA;padding:.3rem 1rem;border-radius:999px;font-size:.8rem;font-weight:600;margin-bottom:1.25rem}
+h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:1rem}
+h1 span{color:#A78BFA}
+.lead{color:#94a3b8;margin-bottom:2rem}
+.flow{background:#151221;border:1px solid #242033;border-radius:16px;padding:1.5rem;font-family:monospace;font-size:.85rem;color:#A78BFA;margin:2rem 0;white-space:pre-wrap}
+ul{list-style:none;display:grid;gap:.6rem}
+ul li{background:#151221;border:1px solid #242033;border-radius:10px;padding:.8rem 1rem;font-size:.92rem}
+ul li::before{content:"✓ ";color:#16A34A;font-weight:700}
+.price-box{background:#151221;border:1px solid #16A34A66;border-radius:16px;padding:2rem;text-align:center;margin-top:2.5rem}
+.price{font-size:2rem;font-weight:800}
+.per{color:#64748b;font-size:.85rem;margin-bottom:1.5rem}
+.btn{display:block;background:#16A34A;color:#000;font-weight:700;padding:.9rem;border-radius:10px;text-decoration:none}
+.btn:hover{background:#22c55e}
+.back{display:inline-block;margin-top:2.5rem;color:#64748b;font-size:.85rem;text-decoration:none}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">🌙 Orquestrador · multi-IA</span>
+  <h1>Você dorme, <span>os agentes produzem</span></h1>
+  <p class="lead">O Overnight Runner executa a fila de tarefas de madrugada: respeita dependências, isola erros (um task com erro não para a fila), faz fallback pra templates se o LLM cair — e registra tudo em log pra você ler como um standup de manhã.</p>
+  <div class="flow">workflow.json → overnight.js --daemon → packs, e-books, datasets, landings 3D
+  dashboard :3500 atualiza sozinho a cada 5s</div>
+  <ul>
+    <li>Fila com dependências e reexecução automática (--daemon, loop de 60s)</li>
+    <li>Colaboração entre IAs via mapa compartilhado (handoff automático)</li>
+    <li>Pool de LLMs com fallback: Ollama local → APIs → template (nunca trava)</li>
+    <li>Dashboard visual + logs diários em overnight/logs/</li>
+    <li>Modo --mock pra validar o pipeline em segundos, sem gastar nada</li>
+  </ul>
+  <div class="price-box">
+    <div class="price">Implantação assistida</div>
+    <div class="per">preço sob consulta — chame no WhatsApp e descreva sua operação</div>
+    <!-- TODO: trocar SEU_NUMERO pelo WhatsApp real -->
+    <a class="btn" href="https://wa.me/5511999999999?text=Quero%20implantar%20o%20Overnight%20Runner%20na%20minha%20opera%C3%A7%C3%A3o">Pedir proposta</a>
+  </div>
+  <a class="back" href="./">← todos os agentes</a>
+  <footer>Overnight Runner · parte da Fábrica de Renda IA</footer>
+</div>
+</body>
+</html>
