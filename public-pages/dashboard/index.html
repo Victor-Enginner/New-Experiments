@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Painel Operacional de IAs — Portfólio Victor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --base: #0B0F1A; --mid: #1A1033; --panel: #12182a; --line: #263049;
+    --primary: #7C3AED; --secondary: #A78BFA; --accent: #16A34A;
+    --alert: #EF4444; --warn: #F59E0B; --text: #E5E7EB; --dim: #9CA3AF;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: radial-gradient(1200px 600px at 20% -10%, var(--mid), transparent 60%),
+                radial-gradient(900px 500px at 100% 0%, #0d2417, transparent 55%), var(--base);
+    color: var(--text); font-family: Inter, system-ui, sans-serif; min-height: 100vh; padding: 28px clamp(14px, 4vw, 48px) 64px;
+  }
+  header { display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; justify-content: space-between; margin-bottom: 26px; }
+  h1 { font-family: Orbitron, sans-serif; font-size: clamp(1.2rem, 3vw, 1.7rem); letter-spacing: .06em; color: #fff; }
+  h1 span { color: var(--secondary); }
+  .stamp { font-family: 'JetBrains Mono', monospace; font-size: .74rem; color: var(--dim); }
+  .stamp b { color: var(--accent); font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  section {
+    background: linear-gradient(180deg, #161d33, var(--panel)); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px; position: relative; overflow: hidden;
+  }
+  section::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--primary), transparent 70%); }
+  section.green::before { background: linear-gradient(90deg, var(--accent), transparent 70%); }
+  h2 { font-family: 'JetBrains Mono', monospace; font-size: .78rem; text-transform: uppercase; letter-spacing: .14em;
+       color: var(--secondary); margin-bottom: 14px; }
+  section.green h2 { color: var(--accent); }
+  ul { list-style: none; }
+  li { display: flex; align-items: center; justify-content: space-between; gap: 10px;
+       padding: 8px 0; border-bottom: 1px dashed #1e2740; font-size: .9rem; }
+  li:last-child { border-bottom: 0; }
+  li a { color: var(--text); text-decoration: none; }
+  li a:hover { color: var(--secondary); text-decoration: underline; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-size: .68rem; padding: 2px 9px; border-radius: 999px;
+         border: 1px solid; white-space: nowrap; }
+  .ok   { color: #4ADE80; border-color: #166534; background: #052e16aa; }
+  .down { color: #FCA5A5; border-color: #7f1d1d; background: #2e0505aa; }
+  .wait { color: #FCD34D; border-color: #78350f; background: #2b1a04aa; }
+  .info { color: var(--secondary); border-color: #4c1d95; background: #1e1040aa; }
+  .metric { display: flex; align-items: baseline; gap: 8px; margin: 10px 0 4px; }
+  .metric .n { font-family: Orbitron, sans-serif; font-size: 2rem; color: #fff; }
+  .metric .n.g { color: #4ADE80; } .metric .n.p { color: var(--secondary); }
+  .metric .u { font-size: .78rem; color: var(--dim); }
+  .note { font-size: .74rem; color: var(--dim); margin-top: 12px; line-height: 1.5; font-family: 'JetBrains Mono', monospace; }
+  .note b { color: var(--warn); font-weight: 600; }
+  footer { margin-top: 28px; font-size: .76rem; color: var(--dim); font-family: 'JetBrains Mono', monospace;
+           border-top: 1px solid var(--line); padding-top: 14px; line-height: 1.7; }
+  footer a { color: var(--secondary); }
+  @media (max-width: 640px) { .metric .n { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>PAINEL OPERACIONAL <span>// DE IAs</span></h1>
+  <div class="stamp">snapshot: <b>2026-09-22 06:40 BRT</b> · gerado estaticamente</div>
+</header>
+
+<div class="grid">
+
+  <section>
+    <h2>▸ Repositórios</h2>
+    <ul>
+      <li><a href="https://github.com/Victor-Enginner/New-Experiments">New-Experiments</a> <span class="tag ok">site+soc+docs</span></li>
+      <li><a href="https://github.com/Victor-Enginner/vitrine">vitrine</a> <span class="tag ok">216 arq</span></li>
+      <li><a href="https://github.com/Victor-Enginner/data-sales-agent">data-sales-agent</a> <span class="tag ok">31 arq</span></li>
+      <li><a href="https://github.com/Victor-Enginner/fabrica-renda-ia">fabrica-renda-ia</a> <span class="tag ok">56 arq</span></li>
+      <li>Coleções de agentes (fork) <span class="tag info">importando</span></li>
+    </ul>
+    <p class="note">Separação concluída: cada projeto tem git próprio.<br>Mapa mental: <b>ORGANIZACAO.md</b> no repo New-Experiments.</p>
+  </section>
+
+  <section class="green">
+    <h2>▸ SOC / SIEM (Elastic)</h2>
+    <div class="metric"><span class="n g">green</span><span class="u">cluster soc-cluster · licença basic (trial expirou 02/09)</span></div>
+    <ul>
+      <li>Elasticsearch :9200 <span class="tag ok">UP</span></li>
+      <li>Kibana :5601 (login user/senha) <span class="tag ok">UP</span></li>
+      <li>Keycloak :8443 (SSO indisponível em basic) <span class="tag wait">parado</span></li>
+      <li>Regras SIEM/NOC <span class="tag info">8</span> · signatures IDPS <span class="tag info">5</span></li>
+      <li>Findings demo (ARP/DNS/GW/EXFIL/NOC) <span class="tag ok">5 dispararam</span></li>
+    </ul>
+    <p class="note">soc:eval agora sai <b>exit1</b> se o ES cair (bug do falso verde corrigido).</p>
+  </section>
+
+  <section class="green">
+    <h2>▸ Serviços locais</h2>
+    <ul>
+      <li>vitrine dev :3000 <span class="tag ok">200</span></li>
+      <li>datasets :4173 <span class="tag ok">200</span></li>
+      <li>fábrica :5173 <span class="tag ok">200</span></li>
+      <li>dashboard workflow :3500 <span class="tag ok">200</span></li>
+      <li>pacote Pages :8130 <span class="tag ok">200</span></li>
+      <li>GitHub Pages (https) <span class="tag wait">aguardando ativação</span></li>
+    </ul>
+    <p class="note">Status dos servidores = verificação local do snapshot.<br>Não é monitoramento ao vivo.</p>
+  </section>
+
+  <section>
+    <h2>▸ Pipeline de conteúdo (overnight)</h2>
+    <div class="metric"><span class="n p">9/13</span><span class="u">tarefas done ·1 on-hold ·3 pending</span></div>
+    <ul>
+      <li>Copy + pesquisa advocacia (X1) <span class="tag ok">done</span></li>
+      <li>Pack prompts + e-book + dataset <span class="tag ok">done</span></li>
+      <li>Landings 3D (2) + anúncios + cal.7 dias <span class="tag ok">done</span></li>
+      <li>Revisão humana (H1) · Publicação (H2) <span class="tag wait">pending</span></li>
+      <li>Pesquisa nicho contabilidade (X3) <span class="tag wait">pending</span></li>
+    </ul>
+    <p class="note">Ver: <b>overnight/overnight.js --status</b></p>
+  </section>
+
+  <section>
+    <h2>▸ Produtos à venda</h2>
+    <ul>
+      <li><a href="../produtos/prompts-ia-advocacia/pagina-venda.html">Pack Prompts Jurídicos</a> <span class="tag wait">R$47 · link pendente</span></li>
+      <li><a href="../produtos/ebook-ia-contabilidade/pagina-venda.html">E-book IA Contabilidade</a> <span class="tag wait">link pendente</span></li>      <li><a href="../datasets/">Dataset Imóveis SP</a> <span class="tag ok">no ar</span></li>
+    </ul>
+    <p class="note"><b>CONFIGURE-SEU-LINK</b> em todos os anúncios — trocar antes de publicar.</p>
+  </section>
+
+  <section>
+    <h2>▸ Agentes & automação</h2>
+    <ul>
+      <li>CLAUDE.md por repo (vitrine/dsa/fábrica) <span class="tag ok">criado</span></li>
+      <li>Awesome AI/CLI agents (forks GitHub) <span class="tag info">importando</span></li>
+      <li>AgentTube (YouTube) — auditar p/ memecoin no README <span class="tag wait">avaliar</span></li>
+      <li>Social-Media-Automation — commercial-prohibited <span class="tag down">descartado</span></li>
+      <li>UMBRAALA (academia de IAs) — plano mestre lido <span class="tag info">fase0</span></li>
+    </ul>
+    <p class="note">Próximo: UMBRAALA fatia vertical (inventário → portal → missão GIGO).</p>
+  </section>
+
+</div>
+
+<footer>
+  Dados = <b style="color:#FCD34D">snapshot verificável</b> do ambiente em 22/09/2026 — sem métricas inventadas, sem agentes "em execução" fictícios (contrato UMBRAALA).<br>
+  Gerado de <a href="../">public-pages/</a> · repos: <a href="https://github.com/Victor-Enginner">Victor-Enginner</a> · design system: roxo #7C3AED / verde #16A34A / Orbitron + JetBrains Mono.
+</footer>
+</body>
+</html>
