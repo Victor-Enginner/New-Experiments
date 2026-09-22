@@ -12,15 +12,24 @@
 
 | Pasta local | Repositório GitHub | Status |
 |---|---|---|
-| `vitrine/` | *a criar* (sugerido: `Victor-Enginner/vitrine`) | ✅ commit inicial `9226968` (216 arquivos) |
-| `data-sales-agent/` | *a criar* (sugerido: `Victor-Enginner/data-sales-agent`) | ✅ commit inicial `96cfb26` (31 arquivos) |
-| `fabrica-renda-ia/` | *a criar* (sugerido: `Victor-Enginner/fabrica-renda-ia`) | ✅ commit inicial `1e14ff6` (56 arquivos) |
+| `vitrine/` | [`Victor-Enginner/vitrine`](https://github.com/Victor-Enginner/vitrine) | ✅ criado via API + push (217 arquivos) + `CLAUDE.md` |
+| `data-sales-agent/` | [`Victor-Enginner/data-sales-agent`](https://github.com/Victor-Enginner/data-sales-agent) | ✅ criado via API + push (32 arquivos) + `CLAUDE.md` |
+| `fabrica-renda-ia/` | [`Victor-Enginner/fabrica-renda-ia`](https://github.com/Victor-Enginner/fabrica-renda-ia) | ✅ criado via API + push (58 arquivos) + `CLAUDE.md` + calendário 7d |
+| `umbraala/` | [`Victor-Enginner/umbraala`](https://github.com/Victor-Enginner/umbraala) | ✅ Fase 0: `docs/DECISIONS.md` + scaffold Vite/React/TS (build verde) |
+| forks de coleções (11) | ex.: `awesome-ai-agents`, `awesome-llm-apps`, `awesome-cli-coding-agents`, `awesome-agent-skills`, `awesome-copilot` + 6 | ✅ agentes importados; autoria dos originais preservada |
 
 ### Umbrella / site
 
 | Pasta local | Repositório GitHub | Papel |
 |---|---|---|
 | raiz (`public-pages/`, `elastic/`, docs) | [`Victor-Enginner/New-Experiments`](https://github.com/Victor-Enginner/New-Experiments) | Site estático (branch `gh-pages`) + documentação + SOC |
+
+**Site no ar:** <https://victor-enginner.github.io/New-Experiments/> — Pages ativo
+(branch `gh-pages`, modo legacy) com **deploy automático**: todo push no `main`
+roda `.github/workflows/pages.yml` (peaceiris/actions-gh-pages) e republica
+`public-pages/` (substitui o fluxo manual `/tmp/ghp-site`).
+
+**Dashboard operacional:** <https://victor-enginner.github.io/New-Experiments/dashboard/>
 
 ### Pastas que ficam como estão (por ora)
 
@@ -46,8 +55,10 @@
 
 - [x] `.gitignore` local criado em cada repo novo (sem `.env`, `node_modules`, `*.log`)
 - [x] Auditoria: zero segredos nos 3 commits iniciais
-- [x] Umbrella: os3 removidos do index e adicionados ao `.gitignore`
-- [ ] Criar os3 repos no github.com (1 min cada, via web)
-- [ ] `git remote add` + `git push` em cada um
-- [ ] Ativar GitHub Pages no `New-Experiments` (branch `gh-pages`) — pendente
-- [ ] Deploy automático via GitHub Actions (opcional, após Pages ativo)
+- [x] Umbrella: os 3 removidos do index e adicionados ao `.gitignore`
+- [x] Criar os repos no GitHub — 3 projetos + `umbraala` + 11 forks (via API)
+- [x] `git remote add` + `git push` em cada um
+- [x] Ativar GitHub Pages no `New-Experiments` (branch `gh-pages`) — via API
+- [x] Deploy automático via GitHub Actions (`pages.yml` → push em `gh-pages`)
+- [ ] UMBRAALA Fase 1 (tokens/emblema) — próximo marco do repo `umbraala`
+- [ ] Dev server `pnpm dev` do umbraala verificado em navegador (build já verde)
