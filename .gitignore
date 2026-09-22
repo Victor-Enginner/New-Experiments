@@ -24,6 +24,11 @@ ai-experiments/
 # estado operacional dos shippers (offsets)
 elastic/state/
 
+# repositórios separados (git próprio — ver ORGANIZACAO.md)
+vitrine/
+data-sales-agent/
+fabrica-renda-ia/
+
 # binários/lixo de raiz
 bateria_go
 bateria_go.jsonl
