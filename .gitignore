@@ -44,11 +44,12 @@ ai-experiments/
 # estado operacional dos shippers (offsets)
 elastic/state/
 
-# repositórios separados (git próprio — ver ORGANIZACAO.md)
-vitrine/
-data-sales-agent/
-fabrica-renda-ia/
-umbraala/
+# repositórios separados (git próprio — ver ORGANIZACAO.md; âncora na raiz p/ não
+# bloquear public-pages/agentes/* que tem o mesmo nome de pasta)
+/vitrine/
+/data-sales-agent/
+/fabrica-renda-ia/
+/umbraala/
 
 # binários/lixo de raiz
 bateria_go

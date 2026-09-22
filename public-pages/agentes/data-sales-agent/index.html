@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Sales Agent — Dados → Vendas no automático</title>
+<meta name="description" content="Agente CLI que coleta dados, gera e-book técnico e publica landing page de vendas. Licença + setup guiado.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0B0F1A;color:#e2e8f0;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:3rem 1.25rem 4rem}
+.badge{display:inline-block;background:#7C3AED22;border:1px solid #7C3AED66;color:#A78BFA;padding:.3rem 1rem;border-radius:999px;font-size:.8rem;font-weight:600;margin-bottom:1.25rem}
+h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:1rem}
+h1 span{color:#A78BFA}
+.lead{color:#94a3b8;margin-bottom:2rem}
+.stats{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.stat{background:#151221;border:1px solid #242033;padding:.6rem 1.1rem;border-radius:999px;font-size:.85rem}
+.stat b{color:#16A34A}
+h2{font-size:1.3rem;margin:2rem 0 1rem}
+ul{list-style:none;display:grid;gap:.6rem}
+ul li{background:#151221;border:1px solid #242033;border-radius:10px;padding:.8rem 1rem;font-size:.92rem}
+ul li::before{content:"✓ ";color:#16A34A;font-weight:700}
+.price-box{background:#151221;border:1px solid #16A34A66;border-radius:16px;padding:2rem;text-align:center;margin-top:2.5rem}
+.price{font-size:3rem;font-weight:800;color:#16A34A}
+.per{color:#64748b;font-size:.85rem;margin-bottom:1.5rem}
+.btn{display:block;background:#16A34A;color:#000;font-weight:700;padding:.9rem;border-radius:10px;text-decoration:none;margin-top:.7rem}
+.btn:hover{background:#22c55e}
+.btn.ghost{background:transparent;border:1px solid #334155;color:#e2e8f0}
+.faq{margin-top:2.5rem;color:#94a3b8;font-size:.9rem}
+.faq p{margin-bottom:.8rem}
+.faq b{color:#e2e8f0}
+.back{display:inline-block;margin-top:2.5rem;color:#64748b;font-size:.85rem;text-decoration:none}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #1e293b;color:#475569;font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">📊 Agente autônomo · CLI + LLM local</span>
+  <h1>Do dado bruto à <span>página de vendas</span> sem tocar no código</h1>
+  <p class="lead">O Data Sales Agent roda 4 módulos sozinho: coleta e limpa dados, escreve um e-book técnico de 7 capítulos, gera a landing page com dashboard — e prepara tudo pra vender no Gumroad, Hotmart ou direto no Pix.</p>
+  <div class="stats">
+    <span class="stat"><b>50</b> registros processados</span>
+    <span class="stat"><b>100%</b> qualidade validada</span>
+    <span class="stat"><b>7</b> capítulos gerados</span>
+    <span class="stat"><b>0</b> dependência de cloud</span>
+  </div>
+  <h2>O que a licença inclui</h2>
+  <ul>
+    <li>Código-fonte completo do pipeline (Node.js, MIT-like pra uso próprio)</li>
+    <li>1 pipeline configurado pro seu nicho, com setup guiado por vídeo-chamada</li>
+    <li>Scraping ético com respeito a robots.txt + mascaramento de IPs (LGPD)</li>
+    <li>Landing page com pagamento Pix, WhatsApp, Hotmart e Kiwify</li>
+    <li>30 dias de atualizações + suporte por e-mail e WhatsApp</li>
+  </ul>
+  <div class="price-box">
+    <div class="price">R$ 197</div>
+    <div class="per">pagamento único · sem mensalidade</div>
+    <!-- TODO: trocar SEU_NUMERO pelo WhatsApp real e CHAVE_PIX pela chave real -->
+    <a class="btn" href="https://wa.me/5511999999999?text=Quero%20o%20Data%20Sales%20Agent%20(R$%20197)">Chamar no WhatsApp</a>
+    <a class="btn ghost" href="../datasets/">Ver dataset de demonstração</a>
+  </div>
+  <div class="faq">
+    <p><b>Preciso saber programar?</b> Não. O setup guiado deixa tudo rodando; depois é um comando por pipeline.</p>
+    <p><b>Precisa de API paga de IA?</b> Não. Roda com Ollama local (grátis) ou GPT-4o-mini (&lt; R$ 0,50 por e-book).</p>
+    <p><b>Os dados são legais?</b> O agente só coleta fontes públicas com permissão e respeita robots.txt e LGPD.</p>
+  </div>
+  <a class="back" href="./">← todos os agentes</a>
+  <footer>Data Sales Agent · parte da Fábrica de Renda IA</footer>
+</div>
+</body>
+</html>
