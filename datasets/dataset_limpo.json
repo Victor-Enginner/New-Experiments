@@ -1,0 +1,806 @@
+{
+  "project": {
+    "name": "Dados de Imóveis SP",
+    "niche": "Mercado Imobiliário de São Paulo",
+    "version": "1.0.0",
+    "generatedAt": "2026-07-28T05:58:33.340Z"
+  },
+  "data": [
+    {
+      "id": 1,
+      "title": "Imóvel 1",
+      "price": 4299240,
+      "location": "Brooklin",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": 453,
+      "propertyType": "Apartamento",
+      "listingType": "Lançamento",
+      "createdAt": "2026-05-05"
+    },
+    {
+      "id": 2,
+      "title": "Imóvel 2",
+      "price": 3156392,
+      "location": "Centro",
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area": 135,
+      "propertyType": "Casa",
+      "listingType": "Aluguel",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": 3,
+      "title": "Imóvel 3",
+      "price": 2159489,
+      "location": "Vila Mariana",
+      "bedrooms": 2,
+      "bathrooms": 4,
+      "area": 316,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2026-07-16"
+    },
+    {
+      "id": 4,
+      "title": "Imóvel 4",
+      "price": 3009484,
+      "location": "Higienópolis",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "area": 237,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "id": 5,
+      "title": "Imóvel 5",
+      "price": 1079744,
+      "location": "Perdizes",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": 369,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2025-11-16"
+    },
+    {
+      "id": 6,
+      "title": "Imóvel 6",
+      "price": 4543598,
+      "location": "Pinheiros",
+      "bedrooms": 1,
+      "bathrooms": 5,
+      "area": 235,
+      "propertyType": "Cobertura",
+      "listingType": "Lançamento",
+      "createdAt": "2025-10-20"
+    },
+    {
+      "id": 7,
+      "title": "Imóvel 7",
+      "price": 2342938,
+      "location": "Moema",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "area": 94,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2026-03-31"
+    },
+    {
+      "id": 8,
+      "title": "Imóvel 8",
+      "price": 4057777,
+      "location": "Vila Mariana",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area": 87,
+      "propertyType": "Casa",
+      "listingType": "Lançamento",
+      "createdAt": "2026-04-12"
+    },
+    {
+      "id": 9,
+      "title": "Imóvel 9",
+      "price": 1062280,
+      "location": "Perdizes",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "area": 357,
+      "propertyType": "Apartamento",
+      "listingType": "Aluguel",
+      "createdAt": "2026-01-15"
+    },
+    {
+      "id": 10,
+      "title": "Imóvel 10",
+      "price": 2323178,
+      "location": "Tatuapé",
+      "bedrooms": 6,
+      "bathrooms": 2,
+      "area": 347,
+      "propertyType": "Apartamento",
+      "listingType": "Venda",
+      "createdAt": "2026-04-29"
+    },
+    {
+      "id": 11,
+      "title": "Imóvel 11",
+      "price": 4259823,
+      "location": "Centro",
+      "bedrooms": 6,
+      "bathrooms": 4,
+      "area": 282,
+      "propertyType": "Casa",
+      "listingType": "Aluguel",
+      "createdAt": "2025-11-12"
+    },
+    {
+      "id": 12,
+      "title": "Imóvel 12",
+      "price": 3913337,
+      "location": "Brooklin",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "area": 272,
+      "propertyType": "Cobertura",
+      "listingType": "Venda",
+      "createdAt": "2025-09-19"
+    },
+    {
+      "id": 13,
+      "title": "Imóvel 13",
+      "price": 214465,
+      "location": "Perdizes",
+      "bedrooms": 3,
+      "bathrooms": 5,
+      "area": 153,
+      "propertyType": "Apartamento",
+      "listingType": "Aluguel",
+      "createdAt": "2026-03-26"
+    },
+    {
+      "id": 14,
+      "title": "Imóvel 14",
+      "price": 3032245,
+      "location": "Centro",
+      "bedrooms": 2,
+      "bathrooms": 5,
+      "area": 453,
+      "propertyType": "Studio",
+      "listingType": "Venda",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": 15,
+      "title": "Imóvel 15",
+      "price": 1362133,
+      "location": "Higienópolis",
+      "bedrooms": 6,
+      "bathrooms": 3,
+      "area": 226,
+      "propertyType": "Cobertura",
+      "listingType": "Lançamento",
+      "createdAt": "2025-11-23"
+    },
+    {
+      "id": 16,
+      "title": "Imóvel 16",
+      "price": 1147081,
+      "location": "Vila Mariana",
+      "bedrooms": 6,
+      "bathrooms": 3,
+      "area": 489,
+      "propertyType": "Apartamento",
+      "listingType": "Lançamento",
+      "createdAt": "2026-07-20"
+    },
+    {
+      "id": 17,
+      "title": "Imóvel 17",
+      "price": 2339650,
+      "location": "Brooklin",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": 163,
+      "propertyType": "Kitnet",
+      "listingType": "Lançamento",
+      "createdAt": "2026-06-12"
+    },
+    {
+      "id": 18,
+      "title": "Imóvel 18",
+      "price": 4045530,
+      "location": "Brooklin",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "area": 486,
+      "propertyType": "Apartamento",
+      "listingType": "Venda",
+      "createdAt": "2025-11-30"
+    },
+    {
+      "id": 19,
+      "title": "Imóvel 19",
+      "price": 3506383,
+      "location": "Vila Mariana",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area": 107,
+      "propertyType": "Casa",
+      "listingType": "Venda",
+      "createdAt": "2026-04-11"
+    },
+    {
+      "id": 20,
+      "title": "Imóvel 20",
+      "price": 441674,
+      "location": "Itaim Bibi",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "area": 183,
+      "propertyType": "Cobertura",
+      "listingType": "Aluguel",
+      "createdAt": "2025-09-21"
+    },
+    {
+      "id": 21,
+      "title": "Imóvel 21",
+      "price": 3468808,
+      "location": "Jardins",
+      "bedrooms": 1,
+      "bathrooms": 3,
+      "area": 351,
+      "propertyType": "Cobertura",
+      "listingType": "Aluguel",
+      "createdAt": "2025-11-16"
+    },
+    {
+      "id": 22,
+      "title": "Imóvel 22",
+      "price": 682288,
+      "location": "Higienópolis",
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "area": 321,
+      "propertyType": "Casa",
+      "listingType": "Venda",
+      "createdAt": "2025-08-15"
+    },
+    {
+      "id": 23,
+      "title": "Imóvel 23",
+      "price": 4008823,
+      "location": "Tatuapé",
+      "bedrooms": 5,
+      "bathrooms": 1,
+      "area": 49,
+      "propertyType": "Cobertura",
+      "listingType": "Venda",
+      "createdAt": "2026-05-07"
+    },
+    {
+      "id": 24,
+      "title": "Imóvel 24",
+      "price": 3677888,
+      "location": "Centro",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "area": 199,
+      "propertyType": "Kitnet",
+      "listingType": "Aluguel",
+      "createdAt": "2025-10-14"
+    },
+    {
+      "id": 25,
+      "title": "Imóvel 25",
+      "price": 3456276,
+      "location": "Pinheiros",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "area": 440,
+      "propertyType": "Apartamento",
+      "listingType": "Venda",
+      "createdAt": "2026-07-05"
+    },
+    {
+      "id": 26,
+      "title": "Imóvel 26",
+      "price": 3125809,
+      "location": "Higienópolis",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "area": 349,
+      "propertyType": "Cobertura",
+      "listingType": "Lançamento",
+      "createdAt": "2025-10-21"
+    },
+    {
+      "id": 27,
+      "title": "Imóvel 27",
+      "price": 330294,
+      "location": "Higienópolis",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "area": 363,
+      "propertyType": "Studio",
+      "listingType": "Lançamento",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "id": 28,
+      "title": "Imóvel 28",
+      "price": 3295562,
+      "location": "Itaim Bibi",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": 317,
+      "propertyType": "Cobertura",
+      "listingType": "Aluguel",
+      "createdAt": "2026-05-12"
+    },
+    {
+      "id": 29,
+      "title": "Imóvel 29",
+      "price": 857047,
+      "location": "Perdizes",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area": 230,
+      "propertyType": "Casa",
+      "listingType": "Venda",
+      "createdAt": "2026-03-29"
+    },
+    {
+      "id": 30,
+      "title": "Imóvel 30",
+      "price": 4504955,
+      "location": "Moema",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area": 317,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "id": 31,
+      "title": "Imóvel 31",
+      "price": 1169592,
+      "location": "Tatuapé",
+      "bedrooms": 2,
+      "bathrooms": 4,
+      "area": 287,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2025-12-09"
+    },
+    {
+      "id": 32,
+      "title": "Imóvel 32",
+      "price": 3122269,
+      "location": "Vila Mariana",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area": 55,
+      "propertyType": "Apartamento",
+      "listingType": "Aluguel",
+      "createdAt": "2025-11-02"
+    },
+    {
+      "id": 33,
+      "title": "Imóvel 33",
+      "price": 3096876,
+      "location": "Moema",
+      "bedrooms": 6,
+      "bathrooms": 4,
+      "area": 283,
+      "propertyType": "Studio",
+      "listingType": "Venda",
+      "createdAt": "2025-12-03"
+    },
+    {
+      "id": 34,
+      "title": "Imóvel 34",
+      "price": 4049843,
+      "location": "Centro",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": 151,
+      "propertyType": "Cobertura",
+      "listingType": "Venda",
+      "createdAt": "2026-02-26"
+    },
+    {
+      "id": 35,
+      "title": "Imóvel 35",
+      "price": 4941595,
+      "location": "Perdizes",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "area": 151,
+      "propertyType": "Apartamento",
+      "listingType": "Lançamento",
+      "createdAt": "2026-04-17"
+    },
+    {
+      "id": 36,
+      "title": "Imóvel 36",
+      "price": 4001088,
+      "location": "Moema",
+      "bedrooms": 2,
+      "bathrooms": 5,
+      "area": 143,
+      "propertyType": "Casa",
+      "listingType": "Venda",
+      "createdAt": "2026-04-09"
+    },
+    {
+      "id": 37,
+      "title": "Imóvel 37",
+      "price": 2292526,
+      "location": "Moema",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "area": 238,
+      "propertyType": "Casa",
+      "listingType": "Aluguel",
+      "createdAt": "2026-07-01"
+    },
+    {
+      "id": 38,
+      "title": "Imóvel 38",
+      "price": 4100855,
+      "location": "Brooklin",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "area": 365,
+      "propertyType": "Cobertura",
+      "listingType": "Venda",
+      "createdAt": "2026-05-24"
+    },
+    {
+      "id": 39,
+      "title": "Imóvel 39",
+      "price": 4710633,
+      "location": "Vila Mariana",
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "area": 129,
+      "propertyType": "Apartamento",
+      "listingType": "Lançamento",
+      "createdAt": "2025-09-21"
+    },
+    {
+      "id": 40,
+      "title": "Imóvel 40",
+      "price": 2997269,
+      "location": "Brooklin",
+      "bedrooms": 2,
+      "bathrooms": 5,
+      "area": 435,
+      "propertyType": "Kitnet",
+      "listingType": "Aluguel",
+      "createdAt": "2026-03-13"
+    },
+    {
+      "id": 41,
+      "title": "Imóvel 41",
+      "price": 2673894,
+      "location": "Higienópolis",
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area": 484,
+      "propertyType": "Casa",
+      "listingType": "Venda",
+      "createdAt": "2026-01-09"
+    },
+    {
+      "id": 42,
+      "title": "Imóvel 42",
+      "price": 4246179,
+      "location": "Centro",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "area": 63,
+      "propertyType": "Apartamento",
+      "listingType": "Aluguel",
+      "createdAt": "2025-07-28"
+    },
+    {
+      "id": 43,
+      "title": "Imóvel 43",
+      "price": 2029263,
+      "location": "Pinheiros",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "area": 109,
+      "propertyType": "Kitnet",
+      "listingType": "Lançamento",
+      "createdAt": "2025-12-25"
+    },
+    {
+      "id": 44,
+      "title": "Imóvel 44",
+      "price": 4083573,
+      "location": "Pinheiros",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "area": 396,
+      "propertyType": "Studio",
+      "listingType": "Aluguel",
+      "createdAt": "2025-11-09"
+    },
+    {
+      "id": 45,
+      "title": "Imóvel 45",
+      "price": 1474036,
+      "location": "Itaim Bibi",
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area": 200,
+      "propertyType": "Apartamento",
+      "listingType": "Aluguel",
+      "createdAt": "2026-03-05"
+    },
+    {
+      "id": 46,
+      "title": "Imóvel 46",
+      "price": 424268,
+      "location": "Jardins",
+      "bedrooms": 6,
+      "bathrooms": 3,
+      "area": 67,
+      "propertyType": "Cobertura",
+      "listingType": "Aluguel",
+      "createdAt": "2025-12-10"
+    },
+    {
+      "id": 47,
+      "title": "Imóvel 47",
+      "price": 4573898,
+      "location": "Moema",
+      "bedrooms": 1,
+      "bathrooms": 5,
+      "area": 121,
+      "propertyType": "Kitnet",
+      "listingType": "Venda",
+      "createdAt": "2025-10-30"
+    },
+    {
+      "id": 48,
+      "title": "Imóvel 48",
+      "price": 4719759,
+      "location": "Higienópolis",
+      "bedrooms": 6,
+      "bathrooms": 4,
+      "area": 112,
+      "propertyType": "Studio",
+      "listingType": "Venda",
+      "createdAt": "2025-11-16"
+    },
+    {
+      "id": 49,
+      "title": "Imóvel 49",
+      "price": 3986556,
+      "location": "Vila Mariana",
+      "bedrooms": 6,
+      "bathrooms": 4,
+      "area": 495,
+      "propertyType": "Apartamento",
+      "listingType": "Venda",
+      "createdAt": "2026-01-03"
+    },
+    {
+      "id": 50,
+      "title": "Imóvel 50",
+      "price": 1626961,
+      "location": "Vila Mariana",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area": 177,
+      "propertyType": "Cobertura",
+      "listingType": "Venda",
+      "createdAt": "2025-09-21"
+    }
+  ],
+  "stats": {
+    "totalRecords": 50,
+    "fields": 10,
+    "nullValues": {
+      "id": 0,
+      "title": 0,
+      "price": 0,
+      "location": 0,
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "area": 0,
+      "propertyType": 0,
+      "listingType": 0,
+      "createdAt": 0
+    },
+    "uniqueValues": {
+      "id": 50,
+      "title": 50,
+      "price": 50,
+      "location": 10,
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "area": 47,
+      "propertyType": 5,
+      "listingType": 3,
+      "createdAt": 45
+    }
+  },
+  "summary": {
+    "totalRecords": 50,
+    "numericFields": {
+      "price": {
+        "min": 214465,
+        "max": 4941595,
+        "avg": "2880502.48"
+      },
+      "bedrooms": {
+        "min": 1,
+        "max": 6,
+        "avg": "3.80"
+      },
+      "bathrooms": {
+        "min": 1,
+        "max": 5,
+        "avg": "3.22"
+      },
+      "area": {
+        "min": 49,
+        "max": 495,
+        "avg": "256.82"
+      }
+    },
+    "categoricalFields": {
+      "title": {
+        "unique": 50,
+        "topOccurrence": [
+          {
+            "value": "Imóvel 1",
+            "count": 1,
+            "percentage": "2.0%"
+          },
+          {
+            "value": "Imóvel 2",
+            "count": 1,
+            "percentage": "2.0%"
+          },
+          {
+            "value": "Imóvel 3",
+            "count": 1,
+            "percentage": "2.0%"
+          },
+          {
+            "value": "Imóvel 4",
+            "count": 1,
+            "percentage": "2.0%"
+          },
+          {
+            "value": "Imóvel 5",
+            "count": 1,
+            "percentage": "2.0%"
+          }
+        ]
+      },
+      "location": {
+        "unique": 10,
+        "topOccurrence": [
+          {
+            "value": "Vila Mariana",
+            "count": 8,
+            "percentage": "16.0%"
+          },
+          {
+            "value": "Higienópolis",
+            "count": 7,
+            "percentage": "14.0%"
+          },
+          {
+            "value": "Brooklin",
+            "count": 6,
+            "percentage": "12.0%"
+          },
+          {
+            "value": "Centro",
+            "count": 6,
+            "percentage": "12.0%"
+          },
+          {
+            "value": "Moema",
+            "count": 6,
+            "percentage": "12.0%"
+          }
+        ]
+      },
+      "propertyType": {
+        "unique": 5,
+        "topOccurrence": [
+          {
+            "value": "Apartamento",
+            "count": 13,
+            "percentage": "26.0%"
+          },
+          {
+            "value": "Cobertura",
+            "count": 12,
+            "percentage": "24.0%"
+          },
+          {
+            "value": "Studio",
+            "count": 11,
+            "percentage": "22.0%"
+          },
+          {
+            "value": "Casa",
+            "count": 9,
+            "percentage": "18.0%"
+          },
+          {
+            "value": "Kitnet",
+            "count": 5,
+            "percentage": "10.0%"
+          }
+        ]
+      },
+      "listingType": {
+        "unique": 3,
+        "topOccurrence": [
+          {
+            "value": "Aluguel",
+            "count": 21,
+            "percentage": "42.0%"
+          },
+          {
+            "value": "Venda",
+            "count": 18,
+            "percentage": "36.0%"
+          },
+          {
+            "value": "Lançamento",
+            "count": 11,
+            "percentage": "22.0%"
+          }
+        ]
+      },
+      "createdAt": {
+        "unique": 45,
+        "topOccurrence": [
+          {
+            "value": "2025-11-16",
+            "count": 3,
+            "percentage": "6.0%"
+          },
+          {
+            "value": "2025-09-21",
+            "count": 3,
+            "percentage": "6.0%"
+          },
+          {
+            "value": "2026-07-22",
+            "count": 2,
+            "percentage": "4.0%"
+          },
+          {
+            "value": "2026-05-05",
+            "count": 1,
+            "percentage": "2.0%"
+          },
+          {
+            "value": "2026-06-06",
+            "count": 1,
+            "percentage": "2.0%"
+          }
+        ]
+      }
+    },
+    "qualityScore": 100
+  }
+}

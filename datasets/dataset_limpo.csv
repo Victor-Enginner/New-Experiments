@@ -1,0 +1,51 @@
+id,title,price,location,bedrooms,bathrooms,area,propertyType,listingType,createdAt
+1,Imóvel 1,4299240,Brooklin,2,2,453,Apartamento,Lançamento,2026-05-05
+2,Imóvel 2,3156392,Centro,4,5,135,Casa,Aluguel,2026-06-06
+3,Imóvel 3,2159489,Vila Mariana,2,4,316,Studio,Aluguel,2026-07-16
+4,Imóvel 4,3009484,Higienópolis,5,2,237,Studio,Aluguel,2026-07-22
+5,Imóvel 5,1079744,Perdizes,4,3,369,Studio,Aluguel,2025-11-16
+6,Imóvel 6,4543598,Pinheiros,1,5,235,Cobertura,Lançamento,2025-10-20
+7,Imóvel 7,2342938,Moema,6,5,94,Studio,Aluguel,2026-03-31
+8,Imóvel 8,4057777,Vila Mariana,4,4,87,Casa,Lançamento,2026-04-12
+9,Imóvel 9,1062280,Perdizes,5,2,357,Apartamento,Aluguel,2026-01-15
+10,Imóvel 10,2323178,Tatuapé,6,2,347,Apartamento,Venda,2026-04-29
+11,Imóvel 11,4259823,Centro,6,4,282,Casa,Aluguel,2025-11-12
+12,Imóvel 12,3913337,Brooklin,4,2,272,Cobertura,Venda,2025-09-19
+13,Imóvel 13,214465,Perdizes,3,5,153,Apartamento,Aluguel,2026-03-26
+14,Imóvel 14,3032245,Centro,2,5,453,Studio,Venda,2026-01-20
+15,Imóvel 15,1362133,Higienópolis,6,3,226,Cobertura,Lançamento,2025-11-23
+16,Imóvel 16,1147081,Vila Mariana,6,3,489,Apartamento,Lançamento,2026-07-20
+17,Imóvel 17,2339650,Brooklin,4,3,163,Kitnet,Lançamento,2026-06-12
+18,Imóvel 18,4045530,Brooklin,6,5,486,Apartamento,Venda,2025-11-30
+19,Imóvel 19,3506383,Vila Mariana,1,1,107,Casa,Venda,2026-04-11
+20,Imóvel 20,441674,Itaim Bibi,6,5,183,Cobertura,Aluguel,2025-09-21
+21,Imóvel 21,3468808,Jardins,1,3,351,Cobertura,Aluguel,2025-11-16
+22,Imóvel 22,682288,Higienópolis,4,1,321,Casa,Venda,2025-08-15
+23,Imóvel 23,4008823,Tatuapé,5,1,49,Cobertura,Venda,2026-05-07
+24,Imóvel 24,3677888,Centro,3,1,199,Kitnet,Aluguel,2025-10-14
+25,Imóvel 25,3456276,Pinheiros,3,1,440,Apartamento,Venda,2026-07-05
+26,Imóvel 26,3125809,Higienópolis,4,2,349,Cobertura,Lançamento,2025-10-21
+27,Imóvel 27,330294,Higienópolis,2,1,363,Studio,Lançamento,2026-07-22
+28,Imóvel 28,3295562,Itaim Bibi,4,3,317,Cobertura,Aluguel,2026-05-12
+29,Imóvel 29,857047,Perdizes,5,5,230,Casa,Venda,2026-03-29
+30,Imóvel 30,4504955,Moema,1,1,317,Studio,Aluguel,2026-06-03
+31,Imóvel 31,1169592,Tatuapé,2,4,287,Studio,Aluguel,2025-12-09
+32,Imóvel 32,3122269,Vila Mariana,3,3,55,Apartamento,Aluguel,2025-11-02
+33,Imóvel 33,3096876,Moema,6,4,283,Studio,Venda,2025-12-03
+34,Imóvel 34,4049843,Centro,2,2,151,Cobertura,Venda,2026-02-26
+35,Imóvel 35,4941595,Perdizes,4,4,151,Apartamento,Lançamento,2026-04-17
+36,Imóvel 36,4001088,Moema,2,5,143,Casa,Venda,2026-04-09
+37,Imóvel 37,2292526,Moema,4,2,238,Casa,Aluguel,2026-07-01
+38,Imóvel 38,4100855,Brooklin,4,2,365,Cobertura,Venda,2026-05-24
+39,Imóvel 39,4710633,Vila Mariana,1,2,129,Apartamento,Lançamento,2025-09-21
+40,Imóvel 40,2997269,Brooklin,2,5,435,Kitnet,Aluguel,2026-03-13
+41,Imóvel 41,2673894,Higienópolis,4,5,484,Casa,Venda,2026-01-09
+42,Imóvel 42,4246179,Centro,5,2,63,Apartamento,Aluguel,2025-07-28
+43,Imóvel 43,2029263,Pinheiros,5,5,109,Kitnet,Lançamento,2025-12-25
+44,Imóvel 44,4083573,Pinheiros,5,3,396,Studio,Aluguel,2025-11-09
+45,Imóvel 45,1474036,Itaim Bibi,4,5,200,Apartamento,Aluguel,2026-03-05
+46,Imóvel 46,424268,Jardins,6,3,67,Cobertura,Aluguel,2025-12-10
+47,Imóvel 47,4573898,Moema,1,5,121,Kitnet,Venda,2025-10-30
+48,Imóvel 48,4719759,Higienópolis,6,4,112,Studio,Venda,2025-11-16
+49,Imóvel 49,3986556,Vila Mariana,6,4,495,Apartamento,Venda,2026-01-03
+50,Imóvel 50,1626961,Vila Mariana,3,3,177,Cobertura,Venda,2025-09-21

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados de Imóveis SP - Dataset Premium</title>
+  <meta name="description" content="undefined">
+  <meta property="og:title" content="Dados de Imóveis SP - Dataset Premium">
+  <meta property="og:description" content="undefined">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+
+/* ============================================
+   Data Sales Agent - Landing Page Styles
+   Gerado automaticamente em 2026-08-04T11:12:41.487Z
+   ============================================ */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #114fd7;
+  --primary-light: #3977ff;
+  --secondary: #7c3aed;
+  --accent: #06b6d4;
+  --font-family: 'Inter', sans-serif;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --success: #22c55e;
+  --warning: #eab308;
+  --error: #ef4444;
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: var(--shadow);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand .brand-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--text-primary);
+}
+
+.navbar-cta {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600 !important;
+}
+
+.navbar-cta:hover {
+  opacity: 0.9;
+  color: white !important;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 4rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, #2563eb15 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, #7c3aed15 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, #06b6d410 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2563eb20;
+  border: 1px solid #2563eb40;
+  color: var(--primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  box-shadow: 0 4px 15px #2563eb40;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #2563eb50;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  background: #2563eb10;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* ========== SECTIONS ========== */
+.section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ========== FEATURES ========== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: #2563eb50;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: #2563eb20;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ========== DASHBOARD ========== */
+.dashboard-section {
+  background: linear-gradient(180deg, var(--bg-dark), #0c1222, var(--bg-dark));
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.dashboard-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* ========== PRICING ========== */
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card.featured {
+  border-color: #2563eb;
+  box-shadow: 0 0 30px #2563eb20;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 1rem;
+  right: -2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 0.35rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(45deg);
+}
+
+.pricing-price {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 1.5rem 0;
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.pricing-features {
+  list-style: none;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* ========== FAQ ========== */
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  user-select: none;
+}
+
+.faq-question:hover {
+  background: #2563eb08;
+}
+
+.faq-question .faq-icon {
+  transition: transform 0.3s;
+  font-size: 1.25rem;
+}
+
+.faq-item.active .faq-question .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 1.5rem 1.25rem;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-card {
+    margin: 0 1rem;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.animate-in:nth-child(2) { animation-delay: 0.1s; }
+.animate-in:nth-child(3) { animation-delay: 0.2s; }
+.animate-in:nth-child(4) { animation-delay: 0.3s; }
+.animate-in:nth-child(5) { animation-delay: 0.4s; }
+.animate-in:nth-child(6) { animation-delay: 0.5s; }
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <span class="brand-icon">📊</span>
+        Dados de Imóveis SP
+      </a>
+      <button class="mobile-menu-btn">☰</button>
+      <ul class="navbar-links">
+        <li><a href="#features">Recursos</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#pricing">Preço</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#pricing" class="navbar-cta">Comprar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          🔥 Dataset Premium • 50 Registros
+        </div>
+        <h1>Dados de Imóveis SP</h1>
+        <p>undefined Dados limpos, analisados e prontos para impulsionar suas decisões de negócio, pesquisas e modelos de IA.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            🚀 Adquirir Agora - undefined
+          </a>
+          <a href="#dashboard" class="btn btn-secondary btn-lg">
+            📊 Ver Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>🎯 Por que escolher este dataset?</h2>
+        <p>Dados de alta qualidade, processados e prontos para uso imediato em seus projetos.</p>
+      </div>
+      <div class="features-grid">
+        
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Dados Estruturados</h3>
+            <p>Dataset com 50 registros limpos, normalizados e prontos para uso em análises, modelos de IA e pesquisas de mercado.</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Análise Estatística</h3>
+            <p>Estatísticas descritivas completas incluindo médias, medianas, distribuições e tendências do mercado de Mercado Imobiliário de São Paulo.</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Guia Técnico Incluso</h3>
+            <p>E-book completo com 7 capítulos abordando análise de mercado, tendências, oportunidades e recomendações estratégicas.</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Alta Qualidade</h3>
+            <p>Dados com 100% de qualidade, validados e prontos para tomada de decisão.</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Formatos Múltiplos</h3>
+            <p>Dataset disponível em JSON e CSV. Guia em Markdown, conversível para PDF e ePub.</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Dados Verificados</h3>
+            <p>Fontes públicas verificadas. Metodologia transparente e documentada.</p>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-value" data-target="50">0</div>
+          <div class="stat-label">Registros Processados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="100">0</div>
+          <div class="stat-label">Qualidade dos Dados (%)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="10">0</div>
+          <div class="stat-label">Campos por Registro</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="7">0</div>
+          <div class="stat-label">Capítulos do Guia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="section dashboard-section" id="dashboard">
+    <div class="container">
+      <div class="section-header">
+        <h2>📊 Dashboard Interativo</h2>
+        <p>Visualize amostras dos dados e entenda o valor do dataset completo.</p>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <h3>💰 Distribuição de Preços</h3>
+          <div class="chart-container">
+            <canvas id="chart-prices"></canvas>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <h3>🏷️ Distribuição por Categoria</h3>
+          <div class="chart-container">
+            <canvas id="chart-distribution"></canvas>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <h3>📈 Tendências</h3>
+          <div class="chart-container">
+            <canvas id="chart-trends"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>💎 Adquira Seu Dataset Agora</h2>
+        <p>Pacote completo com dataset, guia técnico e dashboard interativo.</p>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">MELHOR OFERTA</div>
+        <h3>Pacote Completo</h3>
+        <div class="pricing-price">
+          undefined
+          <span>pagamento único</span>
+        </div>
+        <ul class="pricing-features">
+          <li>Dataset com 50 registros (JSON + CSV)</li>
+          <li>Guia Técnico com 7 capítulos</li>
+          <li>Estatísticas descritivas completas</li>
+          <li>Metadados e documentação</li>
+          <li>Atualizações gratuitas por 30 dias</li>
+          <li>Suporte via e-mail</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+          🚀 Comprar Agora - undefined
+        </a>
+        <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.85rem;">
+          Pagamento 100% seguro • Download imediato
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>❓ Perguntas Frequentes</h2>
+        <p>Tire suas dúvidas sobre o dataset e o processo de compra.</p>
+      </div>
+      <div class="faq-list">
+        
+          <div class="faq-item">
+            <div class="faq-question">
+              O que está incluído no pacote?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Você receberá: (1) Dataset completo com 50 registros em JSON e CSV, (2) Guia Técnico em Markdown com análise detalhada, (3) Metadados e documentação, (4) Estatísticas descritivas completas.</div>
+          </div>
+        
+          <div class="faq-item">
+            <div class="faq-question">
+              Como os dados foram coletados?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Os dados foram coletados de fontes públicas utilizando técnicas automatizadas de web scraping, respeitando os termos de uso e robots.txt dos sites. Todos os dados passaram por processo de limpeza e validação.</div>
+          </div>
+        
+          <div class="faq-item">
+            <div class="faq-question">
+              Posso usar estes dados para treinar modelos de IA?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Sim! O dataset é ideal para treinamento de modelos de machine learning, análise preditiva, pesquisas acadêmicas e estudos de mercado. Os dados estão formatados e prontos para uso.</div>
+          </div>
+        
+          <div class="faq-item">
+            <div class="faq-question">
+              Qual a qualidade dos dados?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Nossos dados possuem 100% de qualidade, medido por completeza, consistência e validação cruzada. Realizamos limpeza automática e normalização de todos os registros.</div>
+          </div>
+        
+          <div class="faq-item">
+            <div class="faq-question">
+              Como recebo meus arquivos após a compra?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Imediatamente após a confirmação do pagamento, você receberá um link para download contendo todos os arquivos do pacote: dataset, guia técnico e documentação.</div>
+          </div>
+        
+          <div class="faq-item">
+            <div class="faq-question">
+              Posso revender os dados?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Os dados são licenciados para uso comercial e acadêmico, mas não é permitida a revenda direta do dataset bruto. Consulte os termos de licença para mais detalhes.</div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Dados de Imóveis SP. Todos os direitos reservados.</p>
+      <p style="margin-top: 0.5rem;">
+        Gerado automaticamente pelo <a href="#">Data Sales Agent</a> v1.0.0
+      </p>
+    </div>
+  </footer>
+
+  <script>
+
+// ============================================
+// Data Sales Agent - Landing Page JavaScript
+// Gerado automaticamente em 2026-08-04T11:12:41.488Z
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  'use strict';
+
+  // ========== NAVBAR SCROLL EFFECT ==========
+  const navbar = document.querySelector('.navbar');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    
+    lastScroll = currentScroll;
+  });
+
+  // ========== MOBILE MENU ==========
+  const mobileBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.navbar-links');
+
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      mobileBtn.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+    });
+  }
+
+  // ========== FAQ ACCORDION ==========
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.parentElement;
+      const isActive = item.classList.contains('active');
+      
+      // Fecha todos
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      
+      // Abre o clicado se não estava ativo
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // ========== SMOOTH SCROLL ==========
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Fecha mobile menu se aberto
+        navLinks.classList.remove('open');
+        if (mobileBtn) mobileBtn.textContent = '☰';
+      }
+    });
+  });
+
+  // ========== CHARTS ==========
+  const chartData = {"priceData":{"labels":["#1","#2","#3","#4","#5","#6","#7","#8","#9","#10","#11","#12","#13","#14","#15","#16","#17","#18","#19","#20"],"values":[4299240,3156392,2159489,3009484,1079744,4543598,2342938,4057777,1062280,2323178,4259823,3913337,214465,3032245,1362133,1147081,2339650,4045530,3506383,441674]},"trendData":{"labels":["Grupo 1","Grupo 2","Grupo 3","Grupo 4","Grupo 5","Grupo 6","Grupo 7","Grupo 8","Grupo 9","Grupo 10"],"values":[418598,1063149,1730376,2394437,3051629,3300569,3817050,4049109,4282210,4697897]}};
+  const projectInfo = {"name":"Dados de Imóveis SP","slug":"imoveis-sp","niche":"Mercado Imobiliário de São Paulo","description":"Dataset completo com preços, localização e características de imóveis na cidade de São Paulo.","price":"R$ 49,90","currency":"BRL","version":"1.0.0","author":"Data Sales Agent","year":2026};
+  const summaryData = {"totalRecords":50,"numericFields":{"price":{"min":214465,"max":4941595,"avg":"2880502.48"},"bedrooms":{"min":1,"max":6,"avg":"3.80"},"bathrooms":{"min":1,"max":5,"avg":"3.22"},"area":{"min":49,"max":495,"avg":"256.82"}},"categoricalFields":{"title":{"unique":50,"topOccurrence":[{"value":"Imóvel 1","count":1,"percentage":"2.0%"},{"value":"Imóvel 2","count":1,"percentage":"2.0%"},{"value":"Imóvel 3","count":1,"percentage":"2.0%"},{"value":"Imóvel 4","count":1,"percentage":"2.0%"},{"value":"Imóvel 5","count":1,"percentage":"2.0%"}]},"location":{"unique":10,"topOccurrence":[{"value":"Vila Mariana","count":8,"percentage":"16.0%"},{"value":"Higienópolis","count":7,"percentage":"14.0%"},{"value":"Brooklin","count":6,"percentage":"12.0%"},{"value":"Centro","count":6,"percentage":"12.0%"},{"value":"Moema","count":6,"percentage":"12.0%"}]},"propertyType":{"unique":5,"topOccurrence":[{"value":"Apartamento","count":13,"percentage":"26.0%"},{"value":"Cobertura","count":12,"percentage":"24.0%"},{"value":"Studio","count":11,"percentage":"22.0%"},{"value":"Casa","count":9,"percentage":"18.0%"},{"value":"Kitnet","count":5,"percentage":"10.0%"}]},"listingType":{"unique":3,"topOccurrence":[{"value":"Aluguel","count":21,"percentage":"42.0%"},{"value":"Venda","count":18,"percentage":"36.0%"},{"value":"Lançamento","count":11,"percentage":"22.0%"}]},"createdAt":{"unique":45,"topOccurrence":[{"value":"2025-11-16","count":3,"percentage":"6.0%"},{"value":"2025-09-21","count":3,"percentage":"6.0%"},{"value":"2026-07-22","count":2,"percentage":"4.0%"},{"value":"2026-05-05","count":1,"percentage":"2.0%"},{"value":"2026-06-06","count":1,"percentage":"2.0%"}]}},"qualityScore":100};
+
+  // Chart 1: Bar Chart - Preços
+  const ctx1 = document.getElementById('chart-prices');
+  if (ctx1 && chartData.priceData) {
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: chartData.priceData.labels,
+        datasets: [{
+          label: 'Preço (R$)',
+          data: chartData.priceData.values,
+          backgroundColor: '#2563eb80',
+          borderColor: '#2563eb',
+          borderWidth: 2,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return 'R$ ' + context.parsed.y.toLocaleString('pt-BR');
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: {
+              color: '#94a3b8',
+              callback: function(value) {
+                return 'R$ ' + (value / 1000).toFixed(0) + 'k';
+              }
+            }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#94a3b8' }
+          }
+        }
+      }
+    });
+  }
+
+  // Chart 2: Doughnut - Distribuição por Categoria
+  const ctx2 = document.getElementById('chart-distribution');
+  if (ctx2 && chartData.distributionData) {
+    const colors = [
+      '#2563eb',
+      '#7c3aed',
+      '#06b6d4',
+      '#22c55e',
+      '#eab308',
+      '#ef4444',
+      '#8b5cf6',
+      '#ec4899'
+    ];
+
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: chartData.distributionData.labels,
+        datasets: [{
+          data: chartData.distributionData.values,
+          backgroundColor: colors.slice(0, chartData.distributionData.labels.length),
+          borderColor: '#1e293b',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#94a3b8',
+              padding: 16,
+              usePointStyle: true
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Chart 3: Line Chart - Tendências
+  const ctx3 = document.getElementById('chart-trends');
+  if (ctx3 && chartData.trendData) {
+    new Chart(ctx3, {
+      type: 'line',
+      data: {
+        labels: chartData.trendData.labels,
+        datasets: [{
+          label: 'Tendência de Preços',
+          data: chartData.trendData.values,
+          borderColor: '#06b6d4',
+          backgroundColor: '#06b6d420',
+          fill: true,
+          tension: 0.4,
+          pointRadius: 4,
+          pointBackgroundColor: '#06b6d4',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return 'R$ ' + context.parsed.y.toLocaleString('pt-BR');
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: {
+              color: '#94a3b8',
+              callback: function(value) {
+                return 'R$ ' + (value / 1000).toFixed(0) + 'k';
+              }
+            }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#94a3b8' }
+          }
+        }
+      }
+    });
+  }
+
+  // ========== ANIMAÇÕES SCROLL ==========
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.feature-card, .stat-card, .dashboard-card').forEach(el => {
+    observer.observe(el);
+  });
+
+  // ========== CONTADOR ANIMADO ==========
+  function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const startTime = performance.now();
+    
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+      const current = Math.floor(start + (target - start) * eased);
+      
+      element.textContent = current.toLocaleString('pt-BR');
+      
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+    
+    requestAnimationFrame(update);
+  }
+
+  // Anima estatísticas
+  document.querySelectorAll('.stat-value[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    animateCounter(el, target);
+  });
+});
+
+  </script>
+</body>
+</html>
