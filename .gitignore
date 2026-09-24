@@ -50,6 +50,7 @@ elastic/state/
 /data-sales-agent/
 /fabrica-renda-ia/
 /umbraala/
+/orquestrador/
 
 # binários/lixo de raiz
 bateria_go

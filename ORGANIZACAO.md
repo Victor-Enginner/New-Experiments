@@ -15,7 +15,8 @@
 | `vitrine/` | [`Victor-Enginner/vitrine`](https://github.com/Victor-Enginner/vitrine) | ✅ criado via API + push (217 arquivos) + `CLAUDE.md` |
 | `data-sales-agent/` | [`Victor-Enginner/data-sales-agent`](https://github.com/Victor-Enginner/data-sales-agent) | ✅ criado via API + push (32 arquivos) + `CLAUDE.md` |
 | `fabrica-renda-ia/` | [`Victor-Enginner/fabrica-renda-ia`](https://github.com/Victor-Enginner/fabrica-renda-ia) | ✅ criado via API + push (58 arquivos) + `CLAUDE.md` + calendário 7d |
-| `umbraala/` | [`Victor-Enginner/umbraala`](https://github.com/Victor-Enginner/umbraala) | ✅ Fase 0: `docs/DECISIONS.md` + scaffold Vite/React/TS (build verde) |
+| `umbraala/` | [`Victor-Enginner/umbraala`](https://github.com/Victor-Enginner/umbraala) | ✅ Fase 0 + Fase 1 (tokens autorais, emblema, base-nova) — build verde, dev server OK |
+| `orquestrador/` | [`Victor-Enginner/orquestrador`](https://github.com/Victor-Enginner/orquestrador) | ✅ MVP multiagente: descoberta → veto → MatrAIx (sim. determinística) + Semantica (grafo JSONL) → **gate humano** · exp-001: 10 ideias → 4 aprovadas |
 | forks de coleções (11) | ex.: `awesome-ai-agents`, `awesome-llm-apps`, `awesome-cli-coding-agents`, `awesome-agent-skills`, `awesome-copilot` + 6 | ✅ agentes importados; autoria dos originais preservada |
 
 ### Umbrella / site
@@ -36,6 +37,7 @@ roda `.github/workflows/pages.yml` (peaceiris/actions-gh-pages) e republica
 | Pasta | Papel | Observação |
 |---|---|---|
 | `ai-experiments/` (4,1 GB) | sensores do SOC + laboratório | **não versionar** (gitignore) — dividir em sub-repos no futuro se quiser |
+| `MatrAIx/`, `Semantica/` | a criar — entram **atrás dos adapters** do `orquestrador/` (venvs separados, Python 3.12) | ver `orquestrador/docs/DECISIONS.md` §2 |
 | `elastic/` | SOC/SIEM (código do New-Experiments) | docs em `semantica.md` |
 | `semantica/` | clone do OSS `semantica-agi/semantica` (referência) | **não é nosso** — não publicar como se fosse |
 | `docs/` | evidências de pentest/forense | **privado** — nunca commitar (gitignore — blindado em `1c5eed5`+) |
@@ -60,5 +62,7 @@ roda `.github/workflows/pages.yml` (peaceiris/actions-gh-pages) e republica
 - [x] `git remote add` + `git push` em cada um
 - [x] Ativar GitHub Pages no `New-Experiments` (branch `gh-pages`) — via API
 - [x] Deploy automático via GitHub Actions (`pages.yml` → push em `gh-pages`)
-- [ ] UMBRAALA Fase 1 (tokens/emblema) — próximo marco do repo `umbraala`
-- [ ] Dev server `pnpm dev` do umbraala verificado em navegador (build já verde)
+- [x] UMBRAALA Fase 1 (tokens/emblema/base-nova) — build verde + dev server
+- [x] Orquestrador MVP publicado (exp-001 rodando, gate humano)
+- [ ] UMBRAALA Fase 2 (entrada cinematográfica) — prompt pronto em `umbraala/docs/PROMPT-CODEX.md`
+- [ ] Descoberta EXTERNA do orquestrador (URL real + trecho verificado)
