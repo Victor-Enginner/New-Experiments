@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dados de Imóveis SP - Dataset Premium</title>
-  <meta name="description" content="undefined">
+  <meta name="description" content="Dataset premium de imóveis de São Paulo: 50 registros limpos em JSON+CSV, guia técnico e dashboard — pronto para análise e IA.">
   <meta property="og:title" content="Dados de Imóveis SP - Dataset Premium">
-  <meta property="og:description" content="undefined">
+  <meta property="og:description" content="Dataset premium de imóveis de São Paulo — pronto para análise e IA.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -753,6 +753,41 @@ body {
     </div>
   </section>
 
+  <!-- CALCULADORA DE ROI -->
+  <section class="section" id="calculadora" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2>🧮 Quanto vale este dataset no SEU projeto?</h2>
+        <p>Arraste os controles e veja a estimativa na hora — dados prontos poupam semanas de coleta e limpeza.</p>
+      </div>
+      <div style="max-width: 620px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--shadow);">
+        <label for="dsaLic" style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: .88rem; margin-top: .25rem;">
+          <span>Projetos que alimentaria por mês</span><strong id="dsaLicV" style="color: var(--primary-light);">3</strong>
+        </label>
+        <input id="dsaLic" type="range" min="1" max="20" value="3" style="width: 100%; accent-color: var(--primary); margin: .4rem 0 1rem;">
+        <label for="dsaPreco" style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: .88rem;">
+          <span>Preço médio do seu projeto</span><strong id="dsaPrecoV" style="color: var(--primary-light);">R$ 3.000</strong>
+        </label>
+        <input id="dsaPreco" type="range" min="500" max="15000" step="100" value="3000" style="width: 100%; accent-color: var(--primary); margin: .4rem 0 1rem;">
+        <label for="dsaMargem" style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: .88rem;">
+          <span>Horas poupadas com dados prontos</span><strong id="dsaMargemV" style="color: var(--success);">25%</strong>
+        </label>
+        <input id="dsaMargem" type="range" min="5" max="60" value="25" style="width: 100%; accent-color: var(--success); margin: .4rem 0 1.25rem;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div style="background: rgba(37,99,235,.12); border: 1px solid rgba(37,99,235,.35); border-radius: var(--radius); padding: 1rem 1.1rem;">
+            <div style="font-size: .7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .6px;">Valor mensal estimado</div>
+            <div id="dsaMensal" style="font-size: 1.6rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums;">R$ 2.250</div>
+          </div>
+          <div style="background: rgba(34,197,94,.10); border: 1px solid rgba(34,197,94,.35); border-radius: var(--radius); padding: 1rem 1.1rem;">
+            <div style="font-size: .7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .6px;">Retorno sobre o dataset</div>
+            <div id="dsaMult" style="font-size: 1.6rem; font-weight: 800; color: var(--success); font-variant-numeric: tabular-nums;">45×</div>
+          </div>
+        </div>
+        <p style="margin: 1rem 0 0; font-size: .75rem; color: var(--text-secondary);">*Estimativa interativa para dimensionar o ganho — o dataset custa R$ 49,90, pagamento único.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- PRICING -->
   <section class="section" id="pricing">
     <div class="container">
@@ -764,7 +799,7 @@ body {
         <div class="pricing-badge">MELHOR OFERTA</div>
         <h3>Pacote Completo</h3>
         <div class="pricing-price">
-          undefined
+          R$ 49,90
           <span>pagamento único</span>
         </div>
         <ul class="pricing-features">
@@ -775,8 +810,8 @@ body {
           <li>Atualizações gratuitas por 30 dias</li>
           <li>Suporte via e-mail</li>
         </ul>
-        <a href="#" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
-          🚀 Comprar Agora - undefined
+        <a href="https://gumroad.com/l/CONFIGURE-SEU-LINK" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+          🚀 Comprar Agora — R$ 49,90
         </a>
         <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.85rem;">
           Pagamento 100% seguro • Download imediato
@@ -1118,6 +1153,31 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+  </script>
+  <script>
+  // Calculadora de ROI do dataset — estimativa interativa (honestamente rotulada)
+  (function() {
+    var lic = document.getElementById('dsaLic'),
+        preco = document.getElementById('dsaPreco'),
+        marg = document.getElementById('dsaMargem'),
+        oLic = document.getElementById('dsaLicV'),
+        oPreco = document.getElementById('dsaPrecoV'),
+        oMarg = document.getElementById('dsaMargemV'),
+        oMensal = document.getElementById('dsaMensal'),
+        oMult = document.getElementById('dsaMult');
+    function brl(n) { return 'R$ ' + n.toLocaleString('pt-BR', { maximumFractionDigits: 0 }); }
+    function calc() {
+      var l = +lic.value, p = +preco.value, m = +marg.value;
+      var mensal = l * p * (m / 100);
+      oLic.textContent = l;
+      oPreco.textContent = brl(p);
+      oMarg.textContent = m + '%';
+      oMensal.textContent = brl(mensal);
+      oMult.textContent = (mensal / 49.9).toFixed(0).replace('.', ',') + '×';
+    }
+    [lic, preco, marg].forEach(function(el) { el.addEventListener('input', calc); });
+    calc();
+  })();
   </script>
 </body>
 </html>
