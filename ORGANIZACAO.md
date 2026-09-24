@@ -15,7 +15,7 @@
 | `vitrine/` | [`Victor-Enginner/vitrine`](https://github.com/Victor-Enginner/vitrine) | ✅ criado via API + push (217 arquivos) + `AGENTS.md` |
 | `data-sales-agent/` | [`Victor-Enginner/data-sales-agent`](https://github.com/Victor-Enginner/data-sales-agent) | ✅ criado via API + push (32 arquivos) + `AGENTS.md` |
 | `fabrica-renda-ia/` | [`Victor-Enginner/fabrica-renda-ia`](https://github.com/Victor-Enginner/fabrica-renda-ia) | ✅ criado via API + push (58 arquivos) + `AGENTS.md` + calendário 7d |
-| `umbraala/` | [`Victor-Enginner/umbraala`](https://github.com/Victor-Enginner/umbraala) | ✅ Fase 0 + Fase 1 (tokens autorais, emblema, base-nova) — build verde, dev server OK |
+| `umbraala/` | [`Victor-Enginner/umbraala`](https://github.com/Victor-Enginner/umbraala) | 🗑️ **DESCARTADO** (decisão do Victor em 24/09/2026) — pasta local removida; repo remoto **arquivado** |
 | `orquestrador/` | [`Victor-Enginner/orquestrador`](https://github.com/Victor-Enginner/orquestrador) | ✅ MVP multiagente: descoberta → veto → MatrAIx (sim. determinística) + Semantica (grafo JSONL) → **gate humano** · exp-001: 10 ideias → 4 aprovadas |
 | forks de coleções (11) | ex.: `awesome-ai-agents`, `awesome-llm-apps`, `awesome-cli-coding-agents`, `awesome-agent-skills`, `awesome-copilot` + 6 | ✅ agentes importados; autoria dos originais preservada |
 
@@ -62,7 +62,7 @@ roda `.github/workflows/pages.yml` (peaceiris/actions-gh-pages) e republica
 - [x] `git remote add` + `git push` em cada um
 - [x] Ativar GitHub Pages no `New-Experiments` (branch `gh-pages`) — via API
 - [x] Deploy automático via GitHub Actions (`pages.yml` → push em `gh-pages`)
-- [x] UMBRAALA Fase 1 (tokens/emblema/base-nova) — build verde + dev server
 - [x] Orquestrador MVP publicado (exp-001 rodando, gate humano)
-- [ ] UMBRAALA Fase 2 (entrada cinematográfica) — prompt pronto em `umbraala/docs/PROMPT-CODEX.md`
+- [x] Lapidação v2: simuladores interativos + WebGL + scrolltelling nos sites; calculadora ROI no dataset; hub da fábrica redesenhado
+- [x] UMBRAALA descartado pelo dono (repo arquivado no GitHub)
 - [ ] Descoberta EXTERNA do orquestrador (URL real + trecho verificado)

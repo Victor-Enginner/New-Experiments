@@ -21,7 +21,7 @@
 | `Victor-Enginner/vitrine` | vitrine React do portfólio | ✅ 217 arquivos + `AGENTS.md` |
 | `Victor-Enginner/data-sales-agent` | pipeline dados → e-book → landing | ✅ 32 arquivos + `AGENTS.md` |
 | `Victor-Enginner/fabrica-renda-ia` | hub de produtos IA (5 pilares) | ✅ 58 arquivos + `AGENTS.md` + `calendario-7dias.md` (o usuário dispensou o calendário — NÃO gastar tempo nele) |
-| `Victor-Enginner/umbraala` | **plataforma de IA (academia de engenharia de IA)** | ✅ Fase 0 + Fase 1 (ver §6) |
+| `Victor-Enginner/umbraala` | ~~plataforma de IA~~ | 🗑️ **DESCARTADO pelo Victor (24/09/2026)** — pasta removida, repo arquivado. NÃO retomar sem pedido explícito |
 | `Victor-Enginner/New-Experiments` | umbrella: site estático (Pages) + SOC/SIEM `elastic/` + docs | ✅ site no ar com deploy automático |
 
 ## 3) Links de GitHub open-source que ele pediu (e veredito)
