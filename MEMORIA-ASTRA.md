@@ -10,7 +10,7 @@
 
 - **GitHub:** `Victor-Enginner` — portfólio em `/home/yoxzy/meus-projetos/meu-portfolio/`
 - **Objetivo macro:** portfólio = **organização de repos**, cada projeto com git próprio,
-  agentes por repo (`CLAUDE.md`), e os agentes se atualizando via `git pull`.
+  agentes por repo (`AGENTS.md`), e os agentes se atualizando via `git pull`.
 - **Plano declarado:** subir **10+ repos de agentes** (CLI, LLM, VLM, awesome-lists)
   + os agentes próprios dele.
 
@@ -18,9 +18,9 @@
 
 | Repo | Papel | Estado |
 |---|---|---|
-| `Victor-Enginner/vitrine` | vitrine React do portfólio | ✅ 217 arquivos + `CLAUDE.md` |
-| `Victor-Enginner/data-sales-agent` | pipeline dados → e-book → landing | ✅ 32 arquivos + `CLAUDE.md` |
-| `Victor-Enginner/fabrica-renda-ia` | hub de produtos IA (5 pilares) | ✅ 58 arquivos + `CLAUDE.md` + `calendario-7dias.md` (o usuário dispensou o calendário — NÃO gastar tempo nele) |
+| `Victor-Enginner/vitrine` | vitrine React do portfólio | ✅ 217 arquivos + `AGENTS.md` |
+| `Victor-Enginner/data-sales-agent` | pipeline dados → e-book → landing | ✅ 32 arquivos + `AGENTS.md` |
+| `Victor-Enginner/fabrica-renda-ia` | hub de produtos IA (5 pilares) | ✅ 58 arquivos + `AGENTS.md` + `calendario-7dias.md` (o usuário dispensou o calendário — NÃO gastar tempo nele) |
 | `Victor-Enginner/umbraala` | **plataforma de IA (academia de engenharia de IA)** | ✅ Fase 0 + Fase 1 (ver §6) |
 | `Victor-Enginner/New-Experiments` | umbrella: site estático (Pages) + SOC/SIEM `elastic/` + docs | ✅ site no ar com deploy automático |
 
@@ -103,7 +103,7 @@ ou AgentTube (após auditoria); coleções awesome = insumo de curadoria.
 1. **UMBRAALA Fase 2** — seguir `umbraala/docs/PROMPT-CODEX.md` (estado declarado lá).
 2. **Auditar AgentTube** antes de instalar (isolamento, red flag memecoin).
 3. **Curadoria dos ~10 repos de agentes** — escolher agentes das coleções forkadas
-   pra cada repo (`CLAUDE.md` de cada um já dá contexto).
+   pra cada repo (`AGENTS.md` de cada um já dá contexto).
 4. **Limpar template Vite legado** da raiz do umbrella (`src/`, `public/`, `index.html`).
 5. **Repos dos agentes PRÓPRIOS** dele (ainda não criados).
 6. Deploy automático igual ao do umbrella nos outros repos (se ele quiser).

@@ -12,9 +12,9 @@
 
 | Pasta local | Repositório GitHub | Status |
 |---|---|---|
-| `vitrine/` | [`Victor-Enginner/vitrine`](https://github.com/Victor-Enginner/vitrine) | ✅ criado via API + push (217 arquivos) + `CLAUDE.md` |
-| `data-sales-agent/` | [`Victor-Enginner/data-sales-agent`](https://github.com/Victor-Enginner/data-sales-agent) | ✅ criado via API + push (32 arquivos) + `CLAUDE.md` |
-| `fabrica-renda-ia/` | [`Victor-Enginner/fabrica-renda-ia`](https://github.com/Victor-Enginner/fabrica-renda-ia) | ✅ criado via API + push (58 arquivos) + `CLAUDE.md` + calendário 7d |
+| `vitrine/` | [`Victor-Enginner/vitrine`](https://github.com/Victor-Enginner/vitrine) | ✅ criado via API + push (217 arquivos) + `AGENTS.md` |
+| `data-sales-agent/` | [`Victor-Enginner/data-sales-agent`](https://github.com/Victor-Enginner/data-sales-agent) | ✅ criado via API + push (32 arquivos) + `AGENTS.md` |
+| `fabrica-renda-ia/` | [`Victor-Enginner/fabrica-renda-ia`](https://github.com/Victor-Enginner/fabrica-renda-ia) | ✅ criado via API + push (58 arquivos) + `AGENTS.md` + calendário 7d |
 | `umbraala/` | [`Victor-Enginner/umbraala`](https://github.com/Victor-Enginner/umbraala) | ✅ Fase 0 + Fase 1 (tokens autorais, emblema, base-nova) — build verde, dev server OK |
 | `orquestrador/` | [`Victor-Enginner/orquestrador`](https://github.com/Victor-Enginner/orquestrador) | ✅ MVP multiagente: descoberta → veto → MatrAIx (sim. determinística) + Semantica (grafo JSONL) → **gate humano** · exp-001: 10 ideias → 4 aprovadas |
 | forks de coleções (11) | ex.: `awesome-ai-agents`, `awesome-llm-apps`, `awesome-cli-coding-agents`, `awesome-agent-skills`, `awesome-copilot` + 6 | ✅ agentes importados; autoria dos originais preservada |
