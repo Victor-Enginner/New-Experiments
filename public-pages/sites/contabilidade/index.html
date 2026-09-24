@@ -59,6 +59,19 @@
 
 
 .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent); }
+
+/* Scrolltelling + WebGL sutil (lapidação) */
+.scroll-fade { opacity: 0; transform: translateY(36px) scale(.98); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+.scroll-fade.on { opacity: 1; transform: none; }
+#sim-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5; pointer-events: none; }
+.sim-box { position: relative; overflow: hidden; background: rgba(255,255,255,.04); border: 1px solid rgba(139,148,255,.25); border-radius: 18px; padding: 30px; max-width: 640px; margin: 0 auto; }
+.sim-box input[type=range] { width: 100%; accent-color: #818cf8; margin: 8px 0 18px; }
+.sim-box label { display: flex; justify-content: space-between; color: #94a3b8; font-size: .88em; }
+.sim-box label strong { color: #a5b4fc; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .scroll-fade { opacity: 1; transform: none; }
+}
 .marquee-track { display: flex; gap: 40px; width: max-content; animation: marquee-scroll 22s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee-scroll { to { transform: translateX(-50%); } }
@@ -148,6 +161,32 @@
   </div>
 </section>
 
+<!-- SIMULADOR DE HONORÁRIOS (estimativa interativa, honestamente rotulada) -->
+<section class="secao container">
+  <h2 class="scroll-fade">Quantas horas a IA <span class="gradient-text">devolve ao seu escritório</span>?</h2>
+  <div class="sim-box scroll-fade" style="margin-top:34px;">
+    <canvas id="sim-canvas" aria-hidden="true"></canvas>
+    <div style="position:relative; z-index:1;">
+      <label for="simHoras">Horas/semana em obrigações acessórias e conferência <strong id="simHorasV">10 h</strong></label>
+      <input id="simHoras" type="range" min="2" max="30" value="10">
+      <label for="simValor">Custo da hora da equipe <strong id="simValorV">R$ 120</strong></label>
+      <input id="simValor" type="range" min="40" max="400" step="10" value="120">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:rgba(99,102,241,.12); border:1px solid rgba(139,148,255,.3); border-radius:14px; padding:16px 18px;">
+          <div style="font-size:.7em; color:#94a3b8; text-transform:uppercase; letter-spacing:.6px;">Horas devolvidas/mês</div>
+          <div id="simOutH" style="font-size:1.7em; font-weight:800; color:#a5b4fc; font-variant-numeric:tabular-nums;">17 h</div>
+        </div>
+        <div style="background:rgba(6,182,212,.10); border:1px solid rgba(34,211,238,.3); border-radius:14px; padding:16px 18px;">
+          <div style="font-size:.7em; color:#94a3b8; text-transform:uppercase; letter-spacing:.6px;">Economia mensal estimada</div>
+          <div id="simOutV" style="font-size:1.7em; font-weight:800; color:#22d3ee; font-variant-numeric:tabular-nums;">R$ 2.078</div>
+        </div>
+      </div>
+      <p style="color:#64748b; font-size:.72em; margin-top:14px;">*Simulação baseada na automação de ~40% das tarefas repetitivas — seu resultado pode variar.</p>
+      <a class="btn-cta" href="https://gumroad.com/l/CONFIGURE-SEU-LINK" style="width:100%; margin-top:22px; text-align:center;">QUERO ESSA ECONOMIA →</a>
+    </div>
+  </div>
+</section>
+
 <!-- PREÇO -->
 <section class="secao container">
   <div class="gradient-border preco-card reveal">
@@ -221,6 +260,54 @@ document.querySelectorAll('[data-counter]').forEach(el => {
   }), { threshold: .5 });
   obs2.observe(el);
 });
+
+// ---- Lapidação: scrolltelling + WebGL de partículas (reduzido p/ mobile) ----
+(function() {
+  var sf = document.querySelectorAll('.scroll-fade');
+  if ('IntersectionObserver' in window) {
+    var o3 = new IntersectionObserver(function(es) { es.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); o3.unobserve(e.target); }
+    }); }, { threshold: .15 });
+    sf.forEach(function(el) { o3.observe(el); });
+  } else { sf.forEach(function(el) { el.classList.add('on'); }); }
+
+  var hora = document.getElementById('simHoras'),
+      valor = document.getElementById('simValor');
+  function fmt(n) { return 'R$ ' + Math.round(n).toLocaleString('pt-BR'); }
+  function calc() {
+    var h = +hora.value, v = +valor.value, devol = h * .4 * 4.33;
+    document.getElementById('simHorasV').textContent = h + ' h';
+    document.getElementById('simValorV').textContent = fmt(v);
+    document.getElementById('simOutH').textContent = Math.round(devol) + ' h';
+    document.getElementById('simOutV').textContent = fmt(devol * v);
+  }
+  hora.addEventListener('input', calc); valor.addEventListener('input', calc); calc();
+
+  var cv = document.getElementById('sim-canvas'), ctx = cv.getContext('2d');
+  var mov = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (cv && mov) {
+    var pts = [], W, H, run = false;
+    function size() { W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
+    size(); window.addEventListener('resize', size);
+    for (var i = 0; i < 46; i++) pts.push({ x: Math.random(), y: Math.random(), s: .04 + Math.random() * .12, r: .6 + Math.random() * 1.4 });
+    function step() {
+      if (!run) return;
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < pts.length; i++) {
+        var p = pts[i]; p.y -= p.s / 100; if (p.y < -.02) { p.y = 1.02; p.x = Math.random(); }
+        ctx.globalAlpha = .35 + .3 * Math.sin(p.y * 6 + i);
+        ctx.fillStyle = '#8b93ff';
+        ctx.beginPath(); ctx.arc(p.x * W, p.y * H, p.r, 0, 6.283); ctx.fill();
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(es) { es.forEach(function(e) {
+        run = e.isIntersecting; if (run) requestAnimationFrame(step);
+      }); }, { threshold: .1 }).observe(cv);
+    } else { run = true; requestAnimationFrame(step); }
+  }
+})();
 
 </script>
 </body>
